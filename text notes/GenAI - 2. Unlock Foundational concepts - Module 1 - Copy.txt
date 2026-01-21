@@ -1,0 +1,191 @@
+What you'll learn in this course
+In this course, you get answers to:
+
+What’s the difference between AI, ML, and gen AI?
+How do different data types, data requirements, and machine learning approaches enable generative AI?
+What Google Cloud strategies can you use to address the limitations of foundation models?
+What are the key challenges and factors for responsible and secure AI development and deployment in an organization?
+
+----------------------------------------
+Understanding AI, ML, and generative AI
+
+Artificial intelligence (AI): The broad field of building machines that can perform tasks requiring human intelligence.
+Machine learning (ML): A subset of AI where machines learn from data.
+Generative AI: An application of AI that creates new content.
+
+------------------------------------------
+Understanding the importance of data in AI:
+-------------------------------------------
+We talked about what ML, AI, and gen AI is all about. But the question is, how do AI systems, powered by ML, actually accomplish these tasks? It all boils down to the data they're fed. Essentially, machine learning models predict the future based on existing data, much like how humans use experience to make educated guesses. However, while humans might rely on intuition or gut feelings, these models use probability. 
+
+ML models analyze the data they've been given, identify patterns, and then calculate the likelihood of different outcomes when presented with new information.
+
+Data quality
+-------------
+This is why the quality and quantity of the data ML models learn from is absolutely crucial to how well they perform. There are five factors to focus on when thinking about data quality.
+
+Accuracy:If the data is inaccurate, the model will learn incorrect patterns and make faulty predictions. Imagine teaching a child about animals using a book with mislabeled pictures—they'd learn the wrong things. The same applies to AI.
+
+Completeness: Completeness refers to the size of a dataset as well as representation within the dataset. The size of the dataset is important because the model needs enough to make an accurate prediction. If a meteorologist tries to predict weather only based on the data of the past day, it will be a much worse prediction than if it used a much larger sample size.
+
+Representative: Data needs to be representative and inclusive, otherwise it can lead to skewed samples and biased outcomes. If a dataset about customer preferences is missing information about a certain demographic, the model might make inaccurate or biased generalizations about that group.
+
+Consistency: Inconsistent data formats or labeling can confuse the model and hinder its ability to learn effectively. Imagine trying to assemble a puzzle where some pieces are labeled with numbers and others with letters—it would be a mess.
+
+Relevance: The data must be relevant to the task the AI is designed to perform. For example, data about traffic patterns in London is unlikely to be helpful for predicting crop yields in Kansas.
+
+
+Data accessibility:
+---------------------
+The ability of AI systems to effectively utilize this data is directly tied to data accessibility. Data accessibility ensures that the necessary data is readily available, usable, and of high quality, allowing for comprehensive model training and reducing potential biases. Without accessible data, even the most sophisticated algorithms are limited in their ability to learn and provide accurate predictions.
+
+Availability: If the necessary data simply isn't available, the AI model can't be trained. For some problems, the data might exist, but it might be locked behind paywalls or restricted due to privacy concerns.
+
+Cost: Gathering and cleaning data can be expensive. The cost of acquiring high-quality data can be a significant barrier to AI development, especially for smaller organizations.
+
+Format: Data needs to be in a format that the AI model can understand and process. Converting data into the appropriate format can be time-consuming and technically challenging.
+
+
+Key takeaway:
+------------
+Data is the foundation of any AI system, with data quality and accessibility being essential for effective AI development. Understanding the types and quality of your data, including accuracy, completeness, consistency, relevance, availability, cost, and format is crucial for successful AI initiatives.
+
+---------------------------------------------------------
+Data types:
+-----------
+Understanding data types:
+------------------------
+Data is central to many business processes and various data types can be used in machine learning, but data isn’t just about numbers and files. Business datasets help organizations understand customers, optimize operations, and drive strategic decisions.
+
+Larger datasets frequently improve model performance, particularly for complex generative AI models that produce diverse content. However, a large dataset isn’t the only thing that matters because model performance is heavily dependent on the type of data used for training. This includes the data’s volume and its organization and structure. 
+
+Understanding your company’s data, its quality, availability, and form is essential for understanding the realm of what will be possible in terms of using that data for AI.
+
+
+Data forms:
+-----------
+Data comes in various forms, just like information itself. We can broadly categorize this data into two main types: structured and unstructured. Let’s explore this through a fictitious company that sells eco-friendly cleaning supplies called Cymbal Cleaning. 
+
+The data they store for customer orders can include information like: 
+- Customer ID 
+- Customer name 
+- Purchase date
+- Order cost
+- Delivery address
+- Product image
+- Feedback (on a 1-5 star scale)
+
+Structured data:
+----------------
+Imagine your contact list on your phone. It has names, phone numbers, and maybe addresses, all organized in a list. That's structured data! It's easy to search and find the information you need.
+
+This type of data is often stored in something called a relational database, which is like a super-organized digital filing cabinet with information neatly arranged in tables. Other examples of structured data include things like online shopping orders or bank statements.
+
+For the cleaning supply company’s database, this would include:
+- Customer ID
+- Customer name
+- Feedback (on a 1-5 star scale)
+- Purchase date
+- Order cost
+
+Unstructured data:
+------------------
+Unstructured data lacks a predefined structure. It is messy and complex by nature. It cannot be easily organized into rows and columns, so more sophisticated analysis techniques are required. Examples of unstructured data include things like text documents (PDFs, emails, social media posts), images (photographs, digital artwork, medical scans), audio (speech recordings, music files), and video (movies, YouTube videos, smartphone videos).
+
+For the cleaning supply company’s database, this would include:
+- Feedback (free-form text)
+- Product image
+- Email content
+
+----------------------------------------------------------------------
+Types of learning:
+-------------------
+Machine learning approaches and data requirements:
+The quality, accessibility, and form of data are fundamental, but how that data is used for ML depends on the specific learning method. Machine learning has three primary learning approaches: supervised, unsupervised, and reinforcement learning, each with its own data requirements. 
+
+Supervised models rely on labeled data, unsupervised models work with unlabeled data, and reinforcement learning learns through interaction and feedback.
+
+Labeled versus unlabeled data:
+------------------------------
+Labeled data: Labeled data has tags, such as a name, type, or number. These tags, whether applied manually or by automated systems, assign meaning to the data. 
+For instance, an image dataset for training a cat-detection model would label each picture as either a cat or dog. Similarly, a set of customer reviews might be labeled as positive, negative, or neutral. These labels enable algorithms to learn relationships and make accurate predictions.
+
+Unlabeled data: Unlabeled data is simply data that is not tagged or labeled in any way. It's raw, unprocessed information without inherent meaning. 
+Examples of unlabeled data include a collection of unorganized photos, a stream of audio recordings, or website traffic logs without user categorization. In these cases, algorithms must independently discover patterns and structures within the data, as there are no pre-existing labels to guide the learning process.
+
+Supervised versus unsupervised learning:
+----------------------------------------
+Supervised learning: Supervised machine learning trains models on labeled data, where each input is paired with its correct output, allowing the model to learn the relationship between them. The model's goal is to identify patterns and relationships within this labeled data, enabling it to accurately predict outputs for new, unseen inputs.
+Predicting housing prices is a common example of supervised learning. A model is trained on a dataset where each house has labeled data, such as its size, number of bedrooms, location, and the corresponding sale price. This labeled data allows the algorithm to learn the relationship between the features of a house and its price. Once trained, the model can then predict the price of a new house based on its features.
+
+Unsupervised learning: Unsupervised ML models deal with raw, unlabeled data to find natural groupings. Instead of learning from labeled data, it dives headfirst into a sea of unlabeled data. 
+For example, an unsupervised learning algorithm could analyze customer purchase history from your company's database. It might uncover hidden segments of customers with similar buying habits, even though you never explicitly labeled those segments beforehand. This can be incredibly valuable for targeted marketing or product recommendations.
+Think of it as exploratory analysis. Unsupervised learning helps you understand the underlying structure of your data and uncover insights that you might not have even known to look for.
+
+Reinforcement learning: Reinforcement learning is all about learning through interaction and feedback. Imagine a robot learning to navigate a maze. It starts with no knowledge of the maze's layout. As it explores and interacts with the maze, it collects data—bumping into walls (negative feedback) or finding shortcuts (positive feedback). Through this process of trial and error, the algorithm learns which actions lead to the best outcomes.
+It's like training a pet. You reward good behavior and discourage bad behavior. And over time, the pet learns to perform the desired actions. Similarly, in reinforcement learning, the algorithm learns to maximize rewards and minimize penalties by interacting with its environment.
+This type of learning is particularly useful in situations where you can't provide explicit instructions or labeled data. For example, you could use reinforcement learning to train a self-driving car to navigate complex traffic situations or to optimize the performance of a robot in a manufacturing plant.
+
+Examples of machine learning approaches on Google Cloud:
+------------------------------------------------------
+Now, let's explore some use cases for different machine learning approaches on Google Cloud.
+
+Predictive maintenance with Vertex AI (supervised learning): By training a model on sensor data from machines like temperature, pressure, and vibration, Vertex AI can predict when a machine is likely to fail, enabling proactive maintenance and reducing downtime.
+
+Anomaly Detection with BigQuery ML (unsupervised learning): BigQuery ML can analyze historical transaction data (amount, location, time, etc.) to identify patterns and flag unusual transactions that deviate significantly from the norm. This helps prevent fraud and minimize financial losses.
+
+Product recommendations with Vertex AI (reinforcement learning): Vertex AI can train a reinforcement learning model to recommend products to users based on their browsing history, purchase behavior, and other factors. The model learns to maximize user engagement and sales by continuously refining its recommendations.
+
+-------------------------------------------------------------------------------------------------
+Turning data into learning using Google Cloud
+
+Data tools and management for ML workloads:
+-------------------------------------------
+The key to building an ML model is data. But the journey from scattered data to actionable insights isn't always easy. There are a few key steps that it takes to get to having a working solution, and if you are building a solution for an enterprise, along the way you need to consider many factors such as security, robustness, and scalability. 
+
+Google Cloud offers a comprehensive suite of data tools and management capabilities tailored for ML workloads. These tools and capabilities are designed to support the entire ML lifecycle, from data preparation and model training to deployment and monitoring. 
+
+Let's break down the key stages of making data accessible for AI.
+1. Gather your data: 
+--------------------
+Data gathering, also called data ingestion, involves collecting raw data from various sources. To effectively train and test your model, determine the data you need based on the outcome you want to achieve.
+
+Google Cloud supports data ingestion through several tools. 
+- Pub/Sub handles real-time streaming data processing, regardless of the structure of the data.
+- Cloud Storage is well-suited for storing unstructured data.
+- Cloud SQL and Cloud Spanner are used to manage structured data.
+
+2. Prepare your data:
+-----------------
+Data preparation is the process of cleaning and transforming raw data into a usable format for analysis or model training. This involves formatting and labeling data properly. 
+
+Google Cloud offers tools like BigQuery for data analysis and Data Catalog for data governance. These tools help prepare data for ML models. 
+- With BigQuery, you can filter data, correct its inconsistencies, and handle missing values. 
+- With Data Catalog, you can find relevant data for your ML projects. This tool provides a centralized repository to easily discover datasets in your organization.
+
+3. Train your model:
+---------------------
+The process of creating your ML model using data is called model training. Google Cloud's Vertex AI platform provides a managed environment for training ML models.
+With Vertex AI, you can set parameters and build your model, using prebuilt containers for popular machine learning frameworks, custom training jobs, and tools for model evaluation. Vertex AI also provides access to powerful computing resources to make the model training process faster.
+
+4. Deploy your model:
+----------------------
+Model deployment is the process of making a trained model available for use. 
+Vertex AI simplifies this by providing tools to put the model into action for generating predictions. This includes scaling the deployment, which means adjusting the resources allocated to the model to handle varying amounts of usage.
+
+5. Manage your model:
+----------------------
+Model management is the process of managing and maintaining your models over time. Google Cloud offers tools for managing the entire lifecycle of ML models. This includes the following:
+
+Versioning: Keep track of different versions of the model.
+Performance tracking: Review the model metrics to check the model's performance.
+Drift monitoring: Watch for changes in the model's accuracy over time.
+Data management: Use Vertex AI Feature Store to manage the data features the model uses.
+Storage: Use Vertex AI Model Garden to store and organize the models in one place.
+Automate: Use Vertex AI Pipelines to automate your machine learning tasks.
+-------------------------------------
+
+Google Cloud tools work together - All these Google Cloud tools are designed to work together seamlessly. You can also connect them with your existing tools or build your own custom solutions. And throughout the entire process, Google Cloud's infrastructure ensures your solution is available and reliable. At the same time, Identity and Access Management (IAM) keeps your data safe and ensures only the right people have access.
+
+Key takeaway
+The ML lifecycle encompasses several key stages: data ingestion and preparation, model training, model deployment, and model management. Google Cloud provides a comprehensive suite of tools and capabilities to support each stage of this lifecycle. It includes Vertex AI for model training and deployment, and various data tools for ingestion, preparation, and management. By understanding and effectively managing this lifecycle, organizations can maximize the value of their initiatives and ensure long-term success.

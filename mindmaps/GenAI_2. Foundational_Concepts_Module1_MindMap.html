@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Foundational Concepts - Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #f5576c;
+            padding-bottom: 20px;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-node {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(245, 87, 108, 0.4);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .center-explanation {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 0.9em;
+        }
+
+        .main-branches {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .branch {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #f5576c;
+        }
+
+        .branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .branch-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #f5576c;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .sub-branch {
+            margin-top: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border-left: 3px solid #f093fb;
+        }
+
+        .sub-branch-title {
+            font-weight: 600;
+            color: #f093fb;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+        }
+
+        .explanation {
+            font-size: 0.8em;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        .definitions-section {
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .definition-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .definition-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .ml-lifecycle {
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        .lifecycle-title {
+            text-align: center;
+            font-size: 1.8em;
+            color: #f5576c;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        .lifecycle-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .lifecycle-step {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        .lifecycle-step h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .learning-types {
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+        }
+
+        .learning-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #333;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .learning-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        @media (max-width: 1400px) {
+            .main-branches {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .lifecycle-steps {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-branches, .definitions-section, .learning-types {
+                grid-template-columns: 1fr;
+            }
+            .lifecycle-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GenAI: Foundational Concepts</h1>
+        
+        <div class="mindmap">
+            <!-- Definitions Section -->
+            <div class="definitions-section">
+                <div class="definition-box">
+                    <h3>AI (Artificial Intelligence)</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Building machines that perform tasks requiring human intelligence</div>
+                </div>
+                <div class="definition-box">
+                    <h3>ML (Machine Learning)</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Subset of AI where machines learn from data</div>
+                </div>
+                <div class="definition-box">
+                    <h3>Generative AI</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Application of AI that creates new content</div>
+                </div>
+            </div>
+
+            <!-- Data Quality Branch -->
+            <div class="main-branches">
+                <div class="branch">
+                    <div class="branch-title">Data Quality</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Accuracy</div>
+                        <div class="explanation">Inaccurate data leads to incorrect patterns and faulty predictions</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Completeness</div>
+                        <div class="explanation">Adequate dataset size and representation for accurate predictions</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Representative</div>
+                        <div class="explanation">Inclusive data prevents skewed samples and biased outcomes</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Consistency</div>
+                        <div class="explanation">Consistent formats and labeling enable effective learning</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Relevance</div>
+                        <div class="explanation">Data must be relevant to the AI's intended task</div>
+                    </div>
+                </div>
+
+                <!-- Data Accessibility Branch -->
+                <div class="branch">
+                    <div class="branch-title">Data Accessibility</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Availability</div>
+                        <div class="explanation">Data must be available, not locked behind paywalls or privacy restrictions</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Cost</div>
+                        <div class="explanation">Gathering and cleaning data can be expensive, a barrier for smaller organizations</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Format</div>
+                        <div class="explanation">Data needs to be in a format the AI model can understand and process</div>
+                    </div>
+                </div>
+
+                <!-- Data Types Branch -->
+                <div class="branch">
+                    <div class="branch-title">Data Types</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Structured Data</div>
+                        <div class="explanation">Organized data in tables (databases, spreadsheets) - easy to search and analyze</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Unstructured Data</div>
+                        <div class="explanation">Messy, complex data (text, images, audio, video) requiring sophisticated analysis</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Learning Types Section -->
+            <div class="learning-types">
+                <div class="learning-box">
+                    <h3>Supervised Learning</h3>
+                    <div class="explanation" style="color: #555;">Trains on labeled data to learn input-output relationships. Example: Predicting housing prices from features</div>
+                    <div style="margin-top: 10px; font-size: 0.85em; color: #666;">
+                        <strong>Google Cloud:</strong> Predictive maintenance with Vertex AI
+                    </div>
+                </div>
+                <div class="learning-box">
+                    <h3>Unsupervised Learning</h3>
+                    <div class="explanation" style="color: #555;">Finds patterns in unlabeled data. Example: Discovering customer segments from purchase history</div>
+                    <div style="margin-top: 10px; font-size: 0.85em; color: #666;">
+                        <strong>Google Cloud:</strong> Anomaly detection with BigQuery ML
+                    </div>
+                </div>
+                <div class="learning-box">
+                    <h3>Reinforcement Learning</h3>
+                    <div class="explanation" style="color: #555;">Learns through interaction and feedback, maximizing rewards. Example: Robot navigation or game playing</div>
+                    <div style="margin-top: 10px; font-size: 0.85em; color: #666;">
+                        <strong>Google Cloud:</strong> Product recommendations with Vertex AI
+                    </div>
+                </div>
+            </div>
+
+            <!-- ML Lifecycle Section -->
+            <div class="ml-lifecycle">
+                <div class="lifecycle-title">ML Lifecycle: Turning Data into Learning</div>
+                <div class="lifecycle-steps">
+                    <div class="lifecycle-step">
+                        <h3>1. Gather</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Data ingestion from various sources. Tools: Pub/Sub (streaming), Cloud Storage (unstructured), Cloud SQL/Spanner (structured)</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <h3>2. Prepare</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Clean and transform raw data. Tools: BigQuery (analysis), Data Catalog (governance & discovery)</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <h3>3. Train</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Create ML model using data. Tool: Vertex AI (managed training environment with prebuilt containers and compute resources)</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <h3>4. Deploy</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Make trained model available for use. Tool: Vertex AI (scaling and prediction generation)</div>
+                    </div>
+                    <div class="lifecycle-step">
+                        <h3>5. Manage</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Maintain models over time: versioning, performance tracking, drift monitoring, feature store, model garden, pipelines</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Takeaway -->
+            <div style="margin-top: 50px; padding: 25px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; text-align: center;">
+                <h2 style="margin-bottom: 15px;">Key Takeaway</h2>
+                <p style="font-size: 1.1em; line-height: 1.6;">
+                    Data is the foundation of AI systems. Understanding data quality (accuracy, completeness, representativeness, consistency, relevance) and accessibility (availability, cost, format) is crucial. The ML lifecycle encompasses gathering, preparing, training, deploying, and managing models, with Google Cloud providing comprehensive tools for each stage.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

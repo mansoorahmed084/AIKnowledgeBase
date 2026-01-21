@@ -1,0 +1,199 @@
+Deep learning, generative AI, and foundation models:
+---------------------------------------------------
+
+Machine learning:
+-----------------
+A broad field that encompasses many different techniques, one of which is deep learning (DL). 
+
+Deep learning:
+--------------
+A powerful subset of machine learning, distinguished by its use of artificial neural networks. These networks enable the processing of highly complex patterns and the generation of sophisticated predictions.
+
+Neural networks can leverage both labeled and unlabeled data, a strategy known as semi-supervised learning. They train on a blend of a small amount of labeled data and a large amount of unlabeled data. That way, they learn foundational concepts and generalize effectively to novel examples.
+
+Generative AI uses the power of deep learning to create new content spanning text, images, audio, and beyond. Deep learning techniques, particularly those centered on neural networks, are the engine behind these generative models.
+
+Foundation models:
+-----------------
+Foundation models use deep learning. They are trained on massive datasets that allow them to learn complex patterns and perform a variety of tasks across different domains. They are incredibly powerful machine learning models trained on a massive scale, often using vast amounts of unlabeled data. This training allows them to develop a broad understanding of the world, capturing intricate patterns and relationships within the data they consume.
+
+Think of a foundation model as a highly advanced learner. It's like a student who has read everything in an entire library, absorbing knowledge from countless books, articles, and websites. This deep and extensive learning allows foundation models to be adapted to a wide range of tasks.
+
+Large language models (LLMs):
+----------------------------
+One particularly exciting type of foundation model is the LLM. These models are specifically designed to understand and generate human language. 
+
+They can translate languages, write different kinds of creative content, and answer your questions in an informative way, even if they are open ended, challenging, or strange. This is likely the most common foundation model you've encountered, such as in popular generative AI chatbots like Gemini. They also help power many search engines you use today.
+
+Diffusion models:
+----------------
+Diffusion models are another type of foundational model. They excel in generating high-quality images, audio, and even video by iteratively refining noise (or unstructured/random data and patterns) into structured data.
+
+Key takeaway:
+------------
+To summarize, deep learning provides the core technology, foundation models are the powerful architectures built on deep learning, and generative AI is the application of these models to create new and original content.
+
+------------------------------------------------------------------------------------------------------------------------
+Choosing a model:
+----------------
+Factors when choosing a model for your use case:
+------------------------------------------------
+When picking a model for your gen AI use case, it's important to start to think about some criteria for different models. Here are some important factors to keep in mind.
+
+Modality:
+---------
+When selecting a generative AI model, it's crucial to consider the modality of your input and output. Modality refers to the type of data the model can process and generate, such as text, images, video, or audio. If your application focuses on a single data type, like generating text-based articles or creating audio files, you'll want to choose a model optimized for that specific modality. For applications that require handling multiple data types, such as generating image captions (processing images and producing text) or creating video with accompanying audio, you'll need a multimodal model. These models can understand and synthesize information across different modalities.
+
+Context:
+--------
+The context window refers to the amount of information a model can consider at one time when generating a response. A larger context window allows the model to "remember" more of the conversation or document, leading to more coherent and relevant outputs, especially for longer texts or complex tasks. However, larger context windows often come with increased computational costs. You need to balance the need for context with the practical limitations of your resources.
+
+Security:
+---------
+Security is paramount, especially when dealing with sensitive data. Consider the model's security features, including data encryption, access controls, and vulnerability management. Ensure the model complies with relevant security standards and regulations for your industry.
+
+Availability and reliability:
+-----------------------------
+The availability and reliability of the model are crucial for production applications. Choose a model that is consistently available and performs reliably under load. Consider factors like uptime guarantees, redundancy, and disaster recovery mechanisms.
+---------------------------------------------------------
+Cost:
+-----
+Generative AI models can vary significantly in cost. Consider the pricing model, which might be based on usage, compute time, or other factors. Evaluate the cost-effectiveness of the model in relation to your budget and the expected value of your application. This is where selecting the right model for the right task is important. Be sure to match the model to the task; bigger isn't always better, and multi-modal capabilities aren't always necessary.
+
+Performance:
+------------
+The performance of the model, including its accuracy, speed, and efficiency, is a critical factor. Evaluate the model's performance on relevant benchmarks and datasets. Consider the trade-offs between performance and cost.
+
+Finetuning and customizations:
+------------------------------
+Some models can be fine-tuned or customized for specific tasks or domains. If you have a specialized use case, consider models that offer fine-tuning capabilities. This often involves training the model further on a specific dataset related to your use case.
+
+Ease of integration:
+-------------------
+The ease of integrating the model into your existing systems and workflows is an important consideration. Look for models that offer well-documented APIs and SDKs.
+
+-------------------------------------------------
+Google Cloud’s ML models:
+-------------------------
+Vertex AI streamlines the integration of advanced artificial intelligence capabilities into business applications, allowing for seamless discovery, deployment, and customization. These models empower businesses to leverage cutting-edge AI, providing the flexibility to work with many different models without the need for extensive in-house model development. 
+
+With Vertex AI you can access models developed by Google including Gemini, Gemma, Imagen, and Veo. You can also access proprietary third-party models, and openly available models.
+
+Gemini: Gemini, a multimodal model, can understand and operate across diverse data formats, such as text, images, audio, and video. Gemini's multimodal design supports applications that require complex multimodal understanding, advanced conversational AI, content creation, and nuanced question answering.
+
+Gemma: A family of lightweight, open models is built upon the research and technology behind Gemini. They offer developers a user-friendly and customizable solution for local deployments and specialized AI applications.
+
+Imagen: A powerful text-to-image diffusion model, it excels at generating high-quality images from textual descriptions. This makes it invaluable for creative design, ecommerce visualization, and content creation.
+
+Veo: A model capable of generating video content. It can produce videos based on textual descriptions or still images. Its functionality allows for the creation of moving images for applications such as film production, advertising, and online content.
+
+Collectively, these Google Cloud foundation models empower businesses to enhance customer experiences through intelligent chatbots and personalized content. They increase productivity by automating tasks and improving information retrieval. They foster innovation by generating new ideas and designs. They also derive data-driven insights for improved decision-making.
+
+Key takeaway:
+-------------
+When choosing a generative AI model, consider factors such as modality, context window, security, availability, cost, performance, fine-tuning, and ease of integration. Google Cloud offers a suite of foundation models, including Gemini, Gemma, Imagen, and Veo, each with unique strengths and capabilities. 
+
+These models can be accessed and customized through Vertex AI, empowering businesses to enhance customer experiences, increase productivity, foster innovation, and improve decision-making.
+
+
+
+-------------------------------------------------------------------------------------------------------------------
+Google strategies for foundation model limitations:
+---------------------------------------------------
+
+Foundation model limitations:
+----------------------------
+Foundation models, while groundbreaking, aren't without limitations. Recognizing these limitations is essential for the responsible and effective utilization of these powerful tools.
+
+Data dependency:
+---------------
+The performance of foundation models is heavily data-dependent. They require large datasets, and any biases or incompleteness in that data will inevitably seep into their outputs. It's like asking a student to write an essay on a book they haven't read. If the data or questions are inaccurate or biased, the AI's performance will suffer.
+
+Knowledge cut-off:
+-------------------
+Knowledge cutoff is the last date that an AI model was trained on new information. Models with older knowledge cutoffs may not know about recent events or discoveries. This can lead to incorrect or outdated answers, since AI models don't automatically update with the latest happenings around the world. 
+For example, if an AI tool's last training date was in 2022, it wouldn't be able to provide information about events or information that happened after 2022.
+
+Bias:
+-----
+An LLM learns from large amounts of data, which may contain biases. You can think of bias as an unbalanced dataset in LLMs. Due to their statistical learning nature, they can sometimes amplify existing biases present in the data. Even subtle biases in the training data can be magnified in the model's outputs.
+
+Fairness:
+---------
+Even with perfectly balanced data, defining what constitutes fairness in an LLM's output is a complex task. Fairness can be interpreted in various ways. Fairness assessments for generative AI models, while valuable, have inherent limitations. These evaluations typically focus on specific categories of bias, potentially overlooking other forms of prejudice. Consequently, these benchmarks do not provide a complete picture of all potential risks associated with the models' outputs, highlighting the ongoing challenge of achieving truly equitable AI.
+
+Hallucinations:
+---------------
+Foundation models can sometimes experience hallucinations, which means they produce outputs that aren't accurate or based on real information. Because foundation models can't verify information against external sources, they may generate factually incorrect or nonsensical responses. These cause significant concern in accuracy-critical applications. The responses might sound convincing, but they are completely wrong. We will cover this in more detail below.
+
+Edge cases:
+-----------
+Rare and atypical scenarios can expose a model's weaknesses, leading to errors, misinterpretations, and unexpected results.
+
+
+Key takeaway:
+-------------
+Foundation models have limitations, including data dependency, knowledge cut-offs, biases, potential for hallucinations, and issues with fairness and edge cases. In the next lesson, you'll learn about techniques to address these challenges and improve the accuracy, reliability, and fairness of foundation models.
+
+-------------------------------------------------------------------------------------------------------------------------
+Techniques to overcome limitations:
+-----------------------------------
+
+Grounding:
+----------
+Generative AI models are amazing at creating content, but sometimes they hallucinate. Grounding is the process of connecting the AI's output to verifiable sources of information—like giving AI a reality check. By providing the model with access to specific data sources, we tether its output to real-world information, reducing the risk of invented content. 
+
+Grounding is essential for building trustworthy and reliable AI applications. By connecting your models to verifiable data, you ensure accuracy and build confidence. It offers several key benefits, including reducing hallucinations, which prevents the AI from generating false or fictional information. Grounding also anchors responses, ensuring the AI's answers are rooted in your provided data sources. Furthermore, it builds trust by enhancing the trustworthiness of the AI's output by providing citations and confidence scores, allowing you to verify the information.
+
+Retrieval-augmented generation (RAG):
+-------------------------------------
+There are many different options on how you can ground in data. For example, you can ground in enterprise data or you can ground using Google Search. One common grounding method to do this is with retrieval-augmented generation, or RAG.
+
+RAG is a grounding method that uses search to find relevant information from a knowledge base and provides that information to the LLM, giving it necessary context.
+
+The first step is retrieval. When you ask an AI a question, RAG uses a search engine to find relevant information. This search engine uses an index that understands the semantic meaning of the text, not just keywords. This means it finds information based on meaning, ensuring higher relevance. 
+
+The retrieved information is then added to the prompt given to the AI. This is the augmentation phase. 
+
+The AI then uses this augmented prompt, along with its existing knowledge, to generate a response. This is referred to as the generation phase.
+
+Prompt engineering:
+--------------------
+Prompting offers the most rapid and straightforward approach to supplying supplementary background information to models. This involves crafting precise prompts to guide the model towards desired outputs. It refines results by understanding the factors that influence a model's responses. However, prompting is limited by the model's existing knowledge; it can't conjure information it hasn't learned.
+
+Fine-tuning:
+------------
+When prompt engineering doesn't deliver the desired outcomes, fine-tuning can enhance your model's performance. Pre-trained models are powerful, but they're designed for general purposes. Tuning helps them excel in specific areas. This process is particularly useful for specific tasks or when you need to enforce specific output formats, especially if you have examples of the desired output.
+
+Tuning involves further training a pre-trained or foundation model on a new dataset specific to your task. This process adjusts the model's parameters, making it more specialized for your needs. Google Cloud Vertex AI provides tooling to facilitate tuning.
+
+Here are some examples of how tuning can be used:
+- Fine-tuning a language model to generate creative content in a specific style.
+- Fine-tuning a code generation model to generate code in a particular programming language.
+- Fine-tuning a translation model to translate between specific languages or domains.
+
+Humans in the loop (HITL):
+--------------------------
+Beyond these techniques, we must remember the invaluable role of humans in the loop (HITL). Machine learning models are powerful, but they sometimes need a human touch. For tasks requiring judgment, context, or handling incomplete data, human expertise is essential. HITL systems integrate human input and feedback directly into the ML process. This collaboration makes models more adaptable, especially in areas like the following.
+- Content moderation: HITL ensures accurate and contextually appropriate moderation of user-generated content, filtering out harmful or inappropriate material that algorithms alone might miss.
+- Sensitive applications: In fields like healthcare or finance, HITL provides oversight for critical decisions, ensuring accuracy and mitigating risks associated with automated systems.
+- High risk decisions: When ML models inform decisions with significant consequences, such as medical diagnoses or criminal justice assessments, HITL acts as a safeguard, providing a layer of human review and accountability.
+- Pre-generation review: Before deploying ML-generated content or decisions, human experts can review and validate the outputs, catching potential errors or biases before they impact users.
+- Post-generation review: After ML outputs are deployed, continuous human review and feedback help identify areas for improvement, enabling models to adapt to evolving contexts and user needs.
+
+Key takeaway:
+------------
+To address foundation model limitations and improve their accuracy and reliability, several key techniques are used. These include grounding with methods like Retrieval-Augmented Generation (RAG), using prompt engineering to guide the model, fine-tuning a model on specific data, and incorporating humans-in-the-loop for critical review and oversight.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Foundational Concepts Module 2 - Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #4facfe;
+            padding-bottom: 20px;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-node {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(79, 172, 254, 0.4);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .center-explanation {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 0.9em;
+        }
+
+        .main-branches {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .branch {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #4facfe;
+        }
+
+        .branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .branch-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #4facfe;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .sub-branch {
+            margin-top: 12px;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border-left: 3px solid #00f2fe;
+        }
+
+        .sub-branch-title {
+            font-weight: 600;
+            color: #00f2fe;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+        }
+
+        .explanation {
+            font-size: 0.8em;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        .section-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+
+        .section-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .section-box h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .section-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-box li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section-box li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .model-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #333;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .model-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .limitations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .limitation-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .limitation-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .techniques-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .technique-box {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .technique-box h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .comparison-table {
+            margin-top: 50px;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .comparison-table h2 {
+            text-align: center;
+            color: #4facfe;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        thead {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        th {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .feature-col {
+            font-weight: 600;
+            color: #4facfe;
+            width: 20%;
+        }
+
+        @media (max-width: 1400px) {
+            .main-branches, .limitations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-branches, .models-grid, .limitations-grid, .techniques-grid {
+                grid-template-columns: 1fr;
+            }
+            table {
+                font-size: 0.9em;
+            }
+            th, td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GenAI: Foundational Concepts Module 2</h1>
+        
+        <div class="mindmap">
+            <!-- Foundation Models Section -->
+            <div class="main-branches">
+                <div class="branch">
+                    <div class="branch-title">Machine Learning</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Broad Field</div>
+                        <div class="explanation">Encompasses many techniques, including deep learning</div>
+                    </div>
+                </div>
+
+                <div class="branch">
+                    <div class="branch-title">Deep Learning</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Neural Networks</div>
+                        <div class="explanation">Processes complex patterns using artificial neural networks</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Semi-supervised</div>
+                        <div class="explanation">Uses blend of labeled and unlabeled data for learning</div>
+                    </div>
+                </div>
+
+                <div class="branch">
+                    <div class="branch-title">Foundation Models</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">LLMs</div>
+                        <div class="explanation">Large Language Models - understand and generate human language</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Diffusion Models</div>
+                        <div class="explanation">Generate high-quality images, audio, video by refining noise</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Choosing a Model Factors -->
+            <div class="section-box">
+                <h2>Factors for Choosing a Model</h2>
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-top: 20px;">
+                    <div>
+                        <h3>Modality</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Type of data (text, images, video, audio) - single or multimodal</div>
+                    </div>
+                    <div>
+                        <h3>Context Window</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Amount of information model can consider - balance with cost</div>
+                    </div>
+                    <div>
+                        <h3>Security</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Encryption, access controls, compliance with standards</div>
+                    </div>
+                    <div>
+                        <h3>Availability</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Uptime guarantees, redundancy, disaster recovery</div>
+                    </div>
+                    <div>
+                        <h3>Cost</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Pricing model based on usage/compute - match model to task</div>
+                    </div>
+                    <div>
+                        <h3>Performance</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Accuracy, speed, efficiency - evaluate benchmarks</div>
+                    </div>
+                    <div>
+                        <h3>Fine-tuning</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Customization capabilities for specific tasks/domains</div>
+                    </div>
+                    <div>
+                        <h3>Integration</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Well-documented APIs and SDKs for easy integration</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Google Cloud Models -->
+            <div class="models-grid">
+                <div class="model-box">
+                    <h3>Gemini</h3>
+                    <div class="explanation" style="color: #555;">Multimodal model - understands text, images, audio, video. Supports complex multimodal understanding, conversational AI, content creation</div>
+                </div>
+                <div class="model-box">
+                    <h3>Gemma</h3>
+                    <div class="explanation" style="color: #555;">Lightweight, open models built on Gemini research. User-friendly for local deployments and specialized applications</div>
+                </div>
+                <div class="model-box">
+                    <h3>Imagen</h3>
+                    <div class="explanation" style="color: #555;">Text-to-image diffusion model. Generates high-quality images from text descriptions for design and ecommerce</div>
+                </div>
+                <div class="model-box">
+                    <h3>Veo</h3>
+                    <div class="explanation" style="color: #555;">Video generation model. Creates videos from text or images for film production, advertising, online content</div>
+                </div>
+            </div>
+
+            <!-- Foundation Model Limitations -->
+            <div class="limitations-grid">
+                <div class="limitation-box">
+                    <h3>Data Dependency</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Requires large datasets - biases and incompleteness affect outputs</div>
+                </div>
+                <div class="limitation-box">
+                    <h3>Knowledge Cut-off</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Models don't know about events after training date - can provide outdated information</div>
+                </div>
+                <div class="limitation-box">
+                    <h3>Bias</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Can amplify existing biases from training data - statistical learning nature</div>
+                </div>
+                <div class="limitation-box">
+                    <h3>Fairness</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Complex to define - evaluations focus on specific categories, may miss other forms</div>
+                </div>
+                <div class="limitation-box">
+                    <h3>Hallucinations</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Produces outputs not based on real information - can't verify against external sources</div>
+                </div>
+                <div class="limitation-box">
+                    <h3>Edge Cases</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Rare scenarios expose weaknesses - errors and misinterpretations</div>
+                </div>
+            </div>
+
+            <!-- Techniques to Overcome Limitations -->
+            <div class="techniques-grid">
+                <div class="technique-box">
+                    <h3>Grounding</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Connects AI output to verifiable sources - reduces hallucinations, anchors responses, builds trust with citations</div>
+                </div>
+                <div class="technique-box">
+                    <h3>RAG (Retrieval-Augmented Generation)</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Uses semantic search to find relevant info from knowledge base, augments prompt, then generates response</div>
+                </div>
+                <div class="technique-box">
+                    <h3>Prompt Engineering</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Craft precise prompts to guide model outputs - rapid approach but limited by model's existing knowledge</div>
+                </div>
+                <div class="technique-box">
+                    <h3>Fine-tuning</h3>
+                    <div class="explanation" style="color: rgba(255,255,255,0.9);">Further trains pre-trained model on task-specific dataset - adjusts parameters for specialization</div>
+                </div>
+            </div>
+
+            <div class="section-box" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); margin-top: 30px;">
+                <h2>Humans in the Loop (HITL)</h2>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
+                    <div>
+                        <h3>Content Moderation</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Human oversight for accurate, contextually appropriate content filtering</div>
+                    </div>
+                    <div>
+                        <h3>Sensitive Applications</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Healthcare/finance oversight for critical decisions and risk mitigation</div>
+                    </div>
+                    <div>
+                        <h3>High Risk Decisions</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Human review for medical diagnoses, criminal justice assessments</div>
+                    </div>
+                    <div>
+                        <h3>Pre/Post Generation Review</h3>
+                        <div class="explanation" style="color: rgba(255,255,255,0.9);">Review before deployment and continuous feedback after deployment</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-table">
+                <h2>RAG vs Fine-tuning vs Grounding Comparison</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="feature-col">Feature</th>
+                            <th>RAG</th>
+                            <th>Fine-tuning</th>
+                            <th>Grounding</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-col"><strong>Definition</strong></td>
+                            <td>Augments LLMs by retrieving relevant information from external knowledge bases and adding it to the prompt</td>
+                            <td>Further trains a pre-trained model on a new dataset to adapt it to a specific task or domain</td>
+                            <td>Connects an AI model's output to verifiable sources of information</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col"><strong>Process</strong></td>
+                            <td>Retrieve relevant information → Add it to the prompt → Generate a response</td>
+                            <td>Select a pre-trained model → Gather data → Train the model → Evaluate and refine</td>
+                            <td>Provide access to data sources → Use RAG or fine-tuning to connect the output</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col"><strong>Data Sources</strong></td>
+                            <td>External knowledge bases (databases, documents, internet)</td>
+                            <td>Task- or domain-specific datasets</td>
+                            <td>External knowledge bases or specific datasets</td>
+                        </tr>
+                        <tr>
+                            <td class="feature-col"><strong>Relationship to Grounding</strong></td>
+                            <td>A specific technique for achieving grounding</td>
+                            <td>Improves a model's ability to be grounded in specific domains</td>
+                            <td>The overarching goal, achieved through techniques like RAG and fine-tuning</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Takeaway -->
+            <div style="margin-top: 50px; padding: 25px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 12px; color: white; text-align: center;">
+                <h2 style="margin-bottom: 15px;">Key Takeaway</h2>
+                <p style="font-size: 1.1em; line-height: 1.6;">
+                    Deep learning powers foundation models (LLMs, diffusion models) that enable generative AI. When choosing models, consider modality, context, security, cost, and performance. Foundation models have limitations (hallucinations, bias, knowledge cut-offs) that can be addressed through grounding techniques like RAG, prompt engineering, fine-tuning, and human-in-the-loop oversight. Grounding is the overarching goal of connecting AI outputs to verifiable sources.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
