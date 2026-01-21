@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Strategy - Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-node {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .center-explanation {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 0.9em;
+        }
+
+        .main-branches {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .branch {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 5px solid #667eea;
+        }
+
+        .branch:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .branch-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .sub-branch {
+            margin-top: 15px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            border-left: 3px solid #764ba2;
+        }
+
+        .sub-branch-title {
+            font-weight: 600;
+            color: #764ba2;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+
+        .explanation {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .additional-sections {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .section-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .section-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .section-box h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .section-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .section-box li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .section-box li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+        }
+
+        .automation-box {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        @media (max-width: 1200px) {
+            .main-branches {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-branches {
+                grid-template-columns: 1fr;
+            }
+            .additional-sections {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GenAI Strategy: Beyond the Chatbot</h1>
+        
+        <div class="mindmap">
+            <div class="center-node">
+                Multi-Directional Strategy
+            </div>
+            <div class="center-explanation">
+                Combines top-down and bottom-up approaches for successful gen AI implementation
+            </div>
+
+            <div class="main-branches">
+                <!-- Strategic Focus -->
+                <div class="branch">
+                    <div class="branch-title">1. Strategic Focus</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Executives</div>
+                        <div class="explanation">Focus on high-impact areas, prioritize feasible use cases with high ROI</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Managers & ICs</div>
+                        <div class="explanation">Identify pain points, understand user needs, start with low-risk areas</div>
+                    </div>
+                </div>
+
+                <!-- Exploration -->
+                <div class="branch">
+                    <div class="branch-title">2. Exploration</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Executives</div>
+                        <div class="explanation">Empower experimentation, foster collaboration and knowledge sharing</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Managers & ICs</div>
+                        <div class="explanation">Experiment with tools, share findings, expand successful initiatives</div>
+                    </div>
+                </div>
+
+                <!-- Responsible AI -->
+                <div class="branch">
+                    <div class="branch-title">3. Responsible AI</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Executives</div>
+                        <div class="explanation">Establish ethical guidelines, data governance, content moderation policies</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Managers & ICs</div>
+                        <div class="explanation">Adhere to standards, think proactively about risks, conduct thorough testing</div>
+                    </div>
+                </div>
+
+                <!-- Resourcing -->
+                <div class="branch">
+                    <div class="branch-title">4. Resourcing</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Executives</div>
+                        <div class="explanation">Create data strategy, leverage existing tools, invest in AI talent</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Managers & ICs</div>
+                        <div class="explanation">Leverage team resources, make business case for additional support</div>
+                    </div>
+                </div>
+
+                <!-- Impact -->
+                <div class="branch">
+                    <div class="branch-title">5. Impact</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Executives</div>
+                        <div class="explanation">Set clear goals and KPIs, communicate progress to stakeholders</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Managers & ICs</div>
+                        <div class="explanation">Demonstrate tangible impact, align with business goals, track KPIs</div>
+                    </div>
+                </div>
+
+                <!-- Continuous Improvement -->
+                <div class="branch">
+                    <div class="branch-title">6. Continuous Improvement</div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Executives</div>
+                        <div class="explanation">Iterative development, regular evaluation, gather feedback mechanisms</div>
+                    </div>
+                    <div class="sub-branch">
+                        <div class="sub-branch-title">Managers & ICs</div>
+                        <div class="explanation">Continuous testing and refinement, update solutions, continue education</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Additional Sections -->
+            <div class="additional-sections">
+                <div class="section-box">
+                    <h2>Creative AI Matrix</h2>
+                    <div class="explanation">Systematic brainstorming tool connecting gen AI capabilities with business priorities to identify practical use cases</div>
+                </div>
+
+                <div class="section-box automation-box">
+                    <h2>Augmentation vs Automation</h2>
+                    <h3>Augment:</h3>
+                    <ul>
+                        <li>Critical thinking & problem solving</li>
+                        <li>Creativity & innovation</li>
+                        <li>Relationship building</li>
+                        <li>Strategic planning</li>
+                    </ul>
+                    <h3>Automate:</h3>
+                    <ul>
+                        <li>Repetitive, rule-based tasks</li>
+                        <li>Time-consuming activities</li>
+                    </ul>
+                    <div class="explanation" style="margin-top: 15px; color: rgba(255,255,255,0.9);">
+                        Humans-in-the-loop essential for data prep, prompt design, output evaluation, and monitoring
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
