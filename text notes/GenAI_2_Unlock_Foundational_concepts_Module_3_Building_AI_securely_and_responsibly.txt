@@ -1,0 +1,91 @@
+Unlock the foundational concepts:
+---------------------------------
+
+Build AI securely and responsibly:
+----------------------------------
+
+Secure AI:
+----------
+What does Secure AI mean?
+Secure AI is about preventing intentional harm being done to your applications. This is about protecting AI systems from malicious attacks and misuse. For all applications, including AI, you need to ensure security throughout the full lifecycle from development through deployment. This includes considering the data, infrastructure, and how and where applications are deployed.
+
+
+To better understand how these security principles apply, let's reexamine the machine learning lifecycle from an earlier lesson.
+Gather your data:
+-----------------
+The foundation of any robust AI system is secure data. Therefore, data must be protected and secured at all times. Access controls must be implemented to restrict who can access the data. They are also necessary to restrict who can add or input to the data. This is crucial to prevent data poisoning, a malicious attack where bad actors corrupt your AI model’s training data by introducing manipulated data. This can cause your model to learn incorrect patterns and make flawed (biased, inaccurate, or even harmful) predictions. It's akin to someone secretly swapping out vital ingredients in a recipe, leading to a disastrous final dish.
+
+Prepare your data:
+------------------
+During data preparation, special attention should be paid to confidential or sensitive data that might be present in the training data. Where feasible, anonymization techniques should be applied to this data, mitigating potential privacy risks. Data also should be rigorously validated, using integrity checks and anomaly detection to prevent poisoning. Data should be securely processed with encryption both at rest and in use. Logging and real-time monitoring should also be performed.
+
+Train your model:
+-----------------
+Securing the model and the training process is paramount. This means safeguarding both the training data and model parameters from unauthorized access or modification. Model theft, where attackers steal proprietary or sensitive AI models, is a significant threat. Beyond gaining a competitive advantage, the stolen models could be used for malicious purposes, exploiting vulnerabilities or replicating sensitive functionality.
+
+Deploy and predict:
+-------------------
+Once your model is trained and ready for action, it's crucial to safeguard it within its operating environment. This means controlling access to the model, determining who can interact with it and how. If you're using a pre-built model, it's essential to verify its source and check for any potential vulnerabilities.
+
+Manage your model:
+-----------------
+Continuous monitoring and maintenance of the model's security are essential. Stay up to date on the latest security best practices in the field, specifically for your platform and model, and regularly update to patch vulnerabilities. Monitor model performance and outputs for anomalies or signs of tampering, and regularly review access permissions.
+
+Think of it like installing a high-tech security system in your office. You wouldn't give everyone the master key, right? Similarly, you need to restrict access to your model and filter the information it receives and sends out. 
+
+One major risk here is adversarial attacks, where attackers try to trick the model with misleading information. Imagine someone trying to bypass your security system with a fake ID—that's essentially what an adversarial attack does to your AI. Therefore, it's critical to have safeguards in place to filter, sanitize, and check the data coming into your model, ensuring it's not being fed misleading information. Likewise, you need to monitor the information your model sends out. Think of it as screening outgoing messages to prevent any accidental leaks of sensitive data or the spread of harmful content.
+
+Stay informed:
+--------------
+Keeping AI applications secure demands constant vigilance and staying informed about the latest security threats and research.
+
+Applying the Secure AI Framework (SAIF):
+----------------------------------------
+Google has developed the Secure AI Framework, or SAIF, to establish security standards for building and deploying AI systems responsibly. This comprehensive approach to AI/ML model risk management addresses the key concerns of security professionals in the rapidly evolving landscape of AI. Following the security practices outlined in SAIF can help your organization find and stop threats, automatically strengthen its defenses, and manage the unique risks of each AI system. The framework is designed to integrate with your company’s existing security, ensuring that AI models are secure by default. For more information, explore Google's Secure AI Framework (SAIF).
+
+Google Cloud security tools:
+----------------------------
+Platforms such as Google Cloud can facilitate secure development. In addition to the Secure AI Framework, Google Cloud offers a range of tools to ensure applications remain secure throughout their lifecycle. Google Cloud has built security into its core through a secure-by-design infrastructure, encompassing its global network and hardware, as well as robust encryption in transit and at rest. It provides customers with detailed control over access and usage of cloud resources through Identity and Access Management (IAM). Google Cloud Security Command Center provides a centralized view of your security posture across your entire Google Cloud environment, and Google Cloud also offers tools for monitoring various workloads.
+
+Key takeaway:
+-------------
+AI offers significant benefits, but it also introduces security risks like data poisoning, model theft, and prompt injection. To address these challenges, a secure foundation for AI applications is essential. Google Cloud's SAIF framework, combined with security tools, can help as you build and maintain secure AI systems.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Responsible AI:
+---------------
+Responsible AI means ensuring your AI applications avoid intentional and unintentional harm. It’s important to consider ethical development and positive outcomes for the software you develop. The same holds true, and perhaps even more so, for AI applications.
+
+Building on security:
+---------------------
+The foundation of responsible AI is security. Secure applications protect both your company and your users. Think of it like building a house: if the foundation is weak, the entire structure is compromised, no matter how beautiful the design. Just as a strong foundation ensures a stable and safe house, robust security forms the essential foundation for building truly responsible AI.
+
+Transparency is key:
+--------------------
+User need to know: Transparency is paramount for responsible applications. Users need to understand how their information is being used and how the AI system works. This transparency should extend to all aspects of the AI's operation, including data handling, decision-making processes, and potential biases.
+
+Privacy in the age of AI:
+-------------------------
+User need to know: Protecting privacy often involves anonymizing or pseudonymizing data, ensuring individuals can't be easily identified. AI models can sometimes inadvertently leak sensitive information from their training data, so it's crucial to implement safeguards to prevent this.
+
+Data quality, bias, and fairness:
+---------------------------------
+Ethical AI requires high quality data:
+Machine learning and generative AI applications are fundamentally based on data. Therefore, responsible AI requires high-quality data. Inaccurate or incomplete data can lead to biased outcomes. Remember, technology often reflects existing societal biases. Without careful consideration, AI can amplify these biases, leading to unfair and discriminatory results. Beyond data quality, it's crucial to consider the responsible use of the data itself. Was it collected consensually? Could it perpetuate harmful biases?
+
+Understanding and mitigating biases:
+AI systems are not independent of the world they are built in. They can inherit and amplify existing societal biases. This can lead to unfair outcomes, such as a resume-screening tool that favors a certain demographic of candidates due to historical biases in hiring data. It's like training a dog with biased commands; the dog will learn and replicate those biases. To counter this, fairness must be a core principle in AI development.
+
+Accountability and explainability:
+----------------------------------
+Fairness requires accountability. We need to know who is responsible for the AI's actions and understand how it makes decisions. This is where explainability comes in. Explainable AI makes the decision-making processes of AI models transparent and understandable. This is crucial for building trust, debugging errors, and uncovering hidden biases. Think of it like a judge explaining their verdict; without a clear explanation, it's hard to trust the decision. Tools like Google Cloud’s Vertex Explainable AI can help understand model outputs and identify potential biases. Understanding how your application uses and interprets the AI's output is crucial for ensuring responsible use.
+
+Legal implications:
+-------------------
+Beyond considerations like fairness and bias, AI development is increasingly governed by legal frameworks. Key areas include data privacy, non-discrimination, intellectual property, and product liability. 
+
+Laws mandate responsible data handling, bias mitigation, and transparency in algorithmic decision-making.
+Organizations must also adhere to the specific rules and limitations of the AI models they employ, ensuring compliance with licensing agreements and legal standards.
+The legal landscape is rapidly evolving, requiring organizations to stay informed and seek legal counsel to ensure compliance.
+Legal compliance is not just a regulatory hurdle. Navigating these legal implications is crucial for building trustworthy AI.
+

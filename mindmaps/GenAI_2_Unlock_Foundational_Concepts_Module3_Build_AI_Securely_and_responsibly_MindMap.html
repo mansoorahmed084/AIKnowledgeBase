@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI Module 3: Building AI Securely and Responsibly - Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #667eea;
+            padding-bottom: 20px;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-node {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .center-explanation {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 0.9em;
+        }
+
+        .main-sections {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .secure-section {
+            border-left: 5px solid #667eea;
+        }
+
+        .responsible-section {
+            border-left: 5px solid #764ba2;
+        }
+
+        .subsection {
+            margin-top: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .subsection-title {
+            font-weight: 600;
+            color: #764ba2;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+
+        .explanation {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.5;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .lifecycle-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .lifecycle-step {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .lifecycle-step h3 {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .principle-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 18px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .principle-box h3 {
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .framework-box {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            margin-top: 30px;
+        }
+
+        .framework-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .threats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .threat-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #333;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .threat-box h3 {
+            margin-bottom: 8px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        @media (max-width: 1400px) {
+            .lifecycle-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .main-sections {
+                grid-template-columns: 1fr;
+            }
+            .lifecycle-grid, .threats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Building AI Securely and Responsibly</h1>
+        
+        <div class="mindmap">
+            <div class="main-sections">
+                <!-- Secure AI Section -->
+                <div class="section secure-section">
+                    <div class="section-title">🔒 Secure AI</div>
+                    <div class="explanation" style="margin-bottom: 20px; font-style: normal; color: #333;">
+                        Preventing intentional harm - protecting AI systems from malicious attacks and misuse throughout the full lifecycle
+                    </div>
+
+                    <!-- Security Threats -->
+                    <div class="threats-grid">
+                        <div class="threat-box">
+                            <h3>Data Poisoning</h3>
+                            <div class="explanation" style="color: #555;">Bad actors corrupt training data, causing model to learn incorrect patterns</div>
+                        </div>
+                        <div class="threat-box">
+                            <h3>Model Theft</h3>
+                            <div class="explanation" style="color: #555;">Attackers steal proprietary models for competitive advantage or malicious use</div>
+                        </div>
+                        <div class="threat-box">
+                            <h3>Adversarial Attacks</h3>
+                            <div class="explanation" style="color: #555;">Attackers trick model with misleading information - like fake ID bypassing security</div>
+                        </div>
+                    </div>
+
+                    <!-- ML Lifecycle Security -->
+                    <div class="subsection">
+                        <div class="subsection-title">Security Through ML Lifecycle</div>
+                        <div class="lifecycle-grid">
+                            <div class="lifecycle-step">
+                                <h3>1. Gather</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.75em;">Protect data with access controls, prevent data poisoning</div>
+                            </div>
+                            <div class="lifecycle-step">
+                                <h3>2. Prepare</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.75em;">Anonymize sensitive data, validate with integrity checks, encrypt at rest and in use</div>
+                            </div>
+                            <div class="lifecycle-step">
+                                <h3>3. Train</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.75em;">Safeguard training data and model parameters from unauthorized access</div>
+                            </div>
+                            <div class="lifecycle-step">
+                                <h3>4. Deploy</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.75em;">Control access, verify model source, filter inputs/outputs</div>
+                            </div>
+                            <div class="lifecycle-step">
+                                <h3>5. Manage</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.75em;">Continuous monitoring, update patches, review access permissions</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SAIF Framework -->
+                    <div class="framework-box">
+                        <h2>Secure AI Framework (SAIF)</h2>
+                        <div class="explanation" style="color: rgba(255,255,255,0.95); font-size: 0.95em;">
+                            Google's comprehensive framework for AI/ML model risk management. Helps find and stop threats, automatically strengthen defenses, and manage unique risks. Designed to integrate with existing security - AI models secure by default.
+                        </div>
+                    </div>
+
+                    <!-- Google Cloud Security Tools -->
+                    <div class="subsection">
+                        <div class="subsection-title">Google Cloud Security Tools</div>
+                        <div class="explanation">
+                            <strong>Secure-by-design infrastructure:</strong> Global network, hardware, encryption in transit and at rest<br>
+                            <strong>Identity and Access Management (IAM):</strong> Detailed control over access and usage<br>
+                            <strong>Security Command Center:</strong> Centralized view of security posture<br>
+                            <strong>Monitoring tools:</strong> For various workloads
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsible AI Section -->
+                <div class="section responsible-section">
+                    <div class="section-title">⚖️ Responsible AI</div>
+                    <div class="explanation" style="margin-bottom: 20px; font-style: normal; color: #333;">
+                        Ensuring AI applications avoid intentional and unintentional harm - ethical development and positive outcomes
+                    </div>
+
+                    <!-- Foundation -->
+                    <div class="subsection">
+                        <div class="subsection-title">Foundation: Security</div>
+                        <div class="explanation">
+                            Security is the foundation of responsible AI - like a house foundation. Secure applications protect both company and users. Robust security forms the essential foundation for building truly responsible AI.
+                        </div>
+                    </div>
+
+                    <!-- Core Principles -->
+                    <div class="principles-grid">
+                        <div class="principle-box">
+                            <h3>Transparency</h3>
+                            <div class="explanation" style="color: rgba(255,255,255,0.9);">Users need to understand how their information is used, how AI works, data handling, decision-making processes, and potential biases</div>
+                        </div>
+                        <div class="principle-box">
+                            <h3>Privacy</h3>
+                            <div class="explanation" style="color: rgba(255,255,255,0.9);">Anonymize or pseudonymize data. Prevent models from leaking sensitive information from training data</div>
+                        </div>
+                        <div class="principle-box">
+                            <h3>Data Quality</h3>
+                            <div class="explanation" style="color: rgba(255,255,255,0.9);">High-quality data is fundamental. Inaccurate or incomplete data leads to biased outcomes. Consider responsible data collection and use</div>
+                        </div>
+                        <div class="principle-box">
+                            <h3>Bias & Fairness</h3>
+                            <div class="explanation" style="color: rgba(255,255,255,0.9);">AI can inherit and amplify societal biases. Fairness must be a core principle - like training a dog with unbiased commands</div>
+                        </div>
+                    </div>
+
+                    <!-- Accountability & Explainability -->
+                    <div class="subsection">
+                        <div class="subsection-title">Accountability & Explainability</div>
+                        <div class="explanation">
+                            <strong>Accountability:</strong> Know who is responsible for AI's actions<br>
+                            <strong>Explainability:</strong> Make decision-making processes transparent and understandable - crucial for trust, debugging, and uncovering biases<br>
+                            <strong>Tools:</strong> Google Cloud's Vertex Explainable AI helps understand model outputs and identify potential biases<br>
+                            Understanding how your application uses and interprets AI output is crucial for responsible use
+                        </div>
+                    </div>
+
+                    <!-- Legal Implications -->
+                    <div class="subsection">
+                        <div class="subsection-title">Legal Implications</div>
+                        <div class="explanation">
+                            <strong>Key Areas:</strong> Data privacy, non-discrimination, intellectual property, product liability<br>
+                            <strong>Requirements:</strong> Laws mandate responsible data handling, bias mitigation, transparency in algorithmic decision-making<br>
+                            <strong>Compliance:</strong> Adhere to AI model licensing agreements and legal standards<br>
+                            <strong>Evolution:</strong> Legal landscape rapidly evolving - stay informed and seek legal counsel<br>
+                            Legal compliance is crucial for building trustworthy AI, not just a regulatory hurdle
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Takeaway -->
+            <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white; text-align: center;">
+                <h2 style="margin-bottom: 20px; font-size: 1.8em;">Key Takeaway</h2>
+                <p style="font-size: 1.1em; line-height: 1.8;">
+                    <strong>Secure AI</strong> protects against intentional harm (data poisoning, model theft, adversarial attacks) throughout the ML lifecycle. Google's SAIF framework and Cloud security tools provide comprehensive protection.<br><br>
+                    <strong>Responsible AI</strong> builds on security to avoid unintentional harm through transparency, privacy, data quality, bias mitigation, accountability, and explainability. Legal compliance ensures trustworthy AI systems that benefit users while protecting their rights.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
