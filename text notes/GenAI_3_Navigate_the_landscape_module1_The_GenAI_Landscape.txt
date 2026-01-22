@@ -1,0 +1,34 @@
+Understanding the layers of gen AI:
+------------------------------------
+The building blocks of generative AI:
+---------------------------------------
+Generative AI is a powerful technology composed of interconnected layers, each playing a vital role in its capabilities. Let's explore these layers—from the foundational infrastructure to the user-facing applications—to gain a deeper understanding of how generative AI works.
+
+GenAI is composed of five layers: infrastructure, models, platform, agents, and gen AI powered applications. 
+
+Application layer:
+You're likely most familiar with the gen AI powered application layer, as it's the user-facing part of generative AI, or the frontend. This is the layer that allows users to interact with and leverage the capabilities of AI. Examples of gen AI powered applications include the Gemini app, Google Workspace with Gemini, or NotebookLM.  
+
+Agent layer:
+An agent is a piece of software that learns how to best achieve a goal based on inputs and tools available to it. This layer focuses on autonomous action, which describes the ability to independently set goals and carry them out within a defined environment. Agents analyze situations, use multiple tools, and make informed decisions without requiring constant human input. They are also capable of handling multi-step tasks that a model alone cannot, such as researching a topic, troubleshooting code, or accessing a system by chaining together actions. You can have a variety of agents, such as customer agents, code agents, data agents, and many more.  
+
+Platform layer:
+The platform layer typically sits between agents and models, providing the infrastructure for them to interact.
+The platform layer sits above the model and infrastructure layers, providing the necessary tools and infrastructure for AI development. It offers APIs, data management capabilities, and model deployment tools. This layer acts as the backbone of the system, bridging the gap between models and agents while simplifying the complexities of managing the underlying infrastructure. 
+
+Model layer:
+The "brain" of the agent is the AI model. These models are complex algorithms trained on vast amounts of data. They learn patterns and relationships in the data, allowing them to generate new content, translate languages, answer questions, and much more.  
+
+Infrastructure layer:
+The infrastructure layer is the foundation upon which everything else rests. It provides the core computing resources needed for generative AI. This includes the physical hardware (like servers, GPUs, and TPUs) and software needed to store and run AI models and training data. 
+
+From the foundational infrastructure to the user-friendly applications, each layer of generative AI plays a crucial role in its capabilities. 
+As leaders, it's vital that you understand these layers to effectively guide your teams in adopting and utilizing generative AI. By understanding this interconnected system, you'll be well-equipped to navigate this landscape and harness its power for your own endeavors. 
+
+Think of generative AI as a powerful engine. The infrastructure is its foundation, the models are its core, and the platform connects everything together. Agents act as the drivers, making decisions and taking action, while applications are the vehicles that take us to our destination.
+
+Key takeaway:
+------------
+Each layer plays a crucial role in enabling the capabilities of generative AI, from the underlying computing power to the user-facing tools. By grasping the interplay between these layers, you'll be better equipped to make informed decisions, foster innovation, and unlock the transformative potential of generative AI for your business.
+-------------------------------------------------------------------------------------
+

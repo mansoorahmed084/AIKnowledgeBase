@@ -1,0 +1,130 @@
+Agents and gen AI powered applications:
+---------------------------------------
+What can agents do?:
+--------------------
+Gen AI agents can process information, reason over complex concepts, and take actions. They can also be used in a variety of applications, including customer service, employee productivity, and creative tasks.
+
+A gen AI agent is an application that tries to achieve a goal by observing the world and acting upon it using the tools it has at its disposal.
+
+With generative AI, you have the flexibility to leverage either pre-built agents and applications, or create custom ones tailored to your specific needs. No matter which path you choose, you can apply generative AI's capabilities in a way that best aligns with your objectives.
+
+Google Cloud tools like AI Applications help teams create AI agents using natural language rather than having to write complex code to do the same thing.
+
+How do agents relate to gen AI powered applications?:
+----------------------------------------------------
+Think of agents as the intelligent pieces within a larger gen AI powered application. They bring specific capabilities to the table.
+- Understand and respond to natural language: This allows applications to have more intuitive interfaces, like chatbots that can actually understand complex requests.
+- Automate complex tasks: Agents can handle multi-step processes within an application, such as gathering information, making decisions based on that information, and taking action.
+- Personalization: Agents can learn user preferences and tailor the application experience accordingly.
+
+What is the role of agents in gen AI powered applications?:
+----------------------------------------------------------
+Think of gen AI powered applications as the user-facing layer. They provide the structure and context for agents to operate within. They define the user interface, the overall goals, and the specific tasks that agents will help with. Often, multiple agents with different specializations work together within a single application to create a richer, more dynamic user experience. This is known as a multi-agent system. You can review some examples below.
+
+- A travel booking app: An agent could handle the complex task of finding the best flights and hotels based on user preferences, while another agent might specialize in suggesting relevant activities and attractions at the destination. Then, the application provides the user with the interface for browsing options and making reservations.
+- A customer support app: An agent could answer common questions, troubleshoot problems, and escalate complex issues to human representatives. The application would provide the chat interface and integrate with other support systems.
+- A personalized learning app: An agent could assess a student's knowledge, recommend relevant learning materials, and even generate personalized exercises. The application would provide the structure for lessons and track progress.
+
+Key takeaway:
+-------------
+Agents enhance applications by adding intelligence and automation and the applications provide the framework and purpose for agents.
+As you start to think about building custom agents for your organization you will begin to understand how they can really enhance your organization.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+How agents work:
+----------------
+Conversational and workflow agents:
+-----------------------------------
+While there are many ways to use gen AI agents, most will fall under two categories: conversational agents or workflow agents.
+
+Conversational agents:
+-----------------------
+Conversational agents are designed to understand what you mean, not just what you say, and respond in a way that makes sense. 
+- You provide input: You can type a message or speak to the agent.
+- The agent understands: Using powerful AI, it figures out the meaning and intention behind your words.
+- The agent calls a tool: Based on your request, the agent might need to gather additional information or perform an action. This could involve searching the web, accessing a database, or interacting with another software application.
+- The agent generates a response: It formulates an answer that's relevant to your request and sounds natural.
+- The agent delivers the response: You'll see or hear the answer depending on how you interacted with it.
+
+Eamples:
+- Answering questions: Imagine you're curious about the weather in Paris. You ask a conversational agent, "What's the weather like in Paris?" And it instantly provides you with the current temperature, forecast, and even suggests what to pack if you're traveling there.
+- Casual conversation: Feeling bored? A conversational agent can engage in lighthearted banter, tell you jokes, or even discuss your favorite books and movies, just like a friend would.
+- Accessing information: Need to know the capital of Australia? Or maybe you want a quick summary of the French Revolution? A conversational agent can access a vast amount of world knowledge and provide you with concise and accurate information.
+
+Workflow agents:
+----------------
+Workflow agents are designed to streamline your work and make sure things get done efficiently and correctly by automating tasks or going through complex processes.
+- You provide input: You define a task or trigger a process like submitting a form, uploading a file, initiating a scheduled event, or even ordering a product online.
+- The agent understands: The agent is the software that automates those steps. It interprets the task's requirements and defines the series of steps needed to complete the task.
+- The agent calls a tool: Based on the workflow's definition, the agent executes a series of actions. This could involve data transformation, file transfer, sending notifications, integrating with external systems, or initiating other automated processes using APIs.
+- The agent generates a result/output: It compiles the outcome of the executed actions, which might be a report, a data file, a confirmation message, or an updated status within a system.
+- The agent delivers the result/output: The agent delivers the output to the designated recipient(s) or system(s), such as via email, a dashboard, a database update, or a file storage location.
+
+Examples:
+---------
+- Ecommerce order fulfillment: An agent automatically processes orders, updates inventory, sends shipping notifications, and handles returns.
+- Customer onboarding: An agent guides new customers through account setup, provides tutorials, and answers frequently asked questions.
+- Automated research: An agent can conduct in-depth research on a given topic by autonomously browsing the web, summarizing relevant content, and generating comprehensive reports. 
+- Security Log Parsing: An agent that inspects incoming security logs for abnormalities and can flag them, open a ticket, begin triage, and assign to humans for review when necessary.
+
+Agent use cases:
+----------------
+Both conversational and workflow agents can cover a broad range of use cases:
+1. Customer Service agents: Customer service agents can answer questions, resolve issues, and provide personalized recommendations.
+2. Employee Productivity agents: Employee productivity agents can help workers find information, manage tasks, and automate workflows.
+3. Creative agents: Creative agents can generate new ideas, create content, and translate languages.
+4. Code agents: Code agents can assist developers in writing, reviewing, and debugging code, and even generating code from natural language descriptions.
+5. Data agents: Data agents can analyze large datasets, identify trends, and extract insights from data.
+6. Security agents: Security agents can automate tasks like summarizing case information, researching threats, generating security-related queries, and even taking actions like creating detection rules.
+
+Key Takeaway:
+--------------
+Generative AI agents are primarily categorized into two types: conversational agents, which interact with users to answer questions and engage in dialogue, and workflow agents, which automate complex, multi-step tasks. 
+
+Whether it's a conversational agent providing seamless customer service or a workflow agent streamlining operations, understanding their potential is crucial for leaders looking to drive innovation and efficiency within their organizations.
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Gen AI agents: Beyond just models:
+-----------------------------------
+AI agents are designed to observe, act, and achieve goals. While AI agents utilize models, they represent a significant leap beyond their capabilities.  
+
+Agents incorporate two key elements that distinguish them from standalone models: a reasoning loop and tools. 
+
+Reasoning loop:
+---------------
+The reasoning loop is the agent's "thinking process." It's a continuous cycle of observing, interpreting, planning, and acting. This iterative process enables agents to analyze situations, plan actions, and adapt based on outcomes.  
+
+Tools:
+------
+Tools are functionalities that allow the agent to interact with its environment. Tools can be anything from accessing and processing data to interacting with software applications or even physical robots. This empowers agents to connect with real-world information and services, much like apps on our phones.  
+For example, an agent could use tools to: 
+- Access and update a company's inventory. 
+- Schedule meetings by checking calendars. 
+- Automatically order new supplies when stock is low. 
+- Or communicate with a robot’s sensors and actuators.  
+
+
+By combining reasoning and tools, AI agents transcend the limitations of large language models (LLMs). They move beyond text generation to solve complex problems, manage multi-step tasks and produce results beyond just text or media. When solving complex problems, agents analyze information, gather data using tools, and make informed decisions with minimal human intervention. 
+When managing multi-step tasks, agents excel at complex workflows that LLMs alone can't handle, such as: conducting in-depth research, troubleshooting code, and automating tasks across multiple systems.  
+
+The reasoning loop is the heart of an AI agent's operation. It's an iterative process where the agent:  
+Observes: Gathers information about its environment and the task at hand. 
+Interprets: Processes the information and assesses the current situation. 
+Plans: Plans a course of action to achieve its goal. 
+And acts: Executes the planned action.  
+
+This loop continues until the agent reaches its goal or a stopping point. The complexity of the loop varies depending on the agent and its task. Some agents have simple, rule-based processes, while others use more complex logic, potentially involving additional algorithms or probabilistic reasoning.
+
+Advanced prompt engineering frameworks:
+---------------------------------------
+The reasoning loop often utilizes advanced prompt engineering frameworks to guide its decision-making process. These frameworks can include:
+- Simple rule-based calculations
+- Complex thought chains
+- Machine learning algorithms
+- Probabilistic reasoning techniques
+
+Examples of such frameworks include ReAct or chain-of-thought (CoT) prompting, which we discuss in more detail in Course 5 of this learning path.
+
+Key takeaway:
+-------------
+AI agents represent a significant leap beyond standard language models by incorporating a reasoning loop and tools that allow them to interact with their environment. This combination empowers agents to solve complex problems and manage intricate workflows, far surpassing the capabilities of standalone models.
+----------------------------------------------------------------------------------------------------------------------------
