@@ -1,0 +1,144 @@
+The platform layer:
+------------------
+
+Introduction:
+-------------
+The platform layer provides the foundation for building and scaling your AI initiatives, and the concept may be a bit confusing at first, but don't worry, this lesson will demystify the concept and guide you through its key components.
+Machine learning solutions can be extremely complex to build on your own in the wild. Having a great platform is what can make the difference by bringing all the pieces you need together in an easy and scalable way.
+
+example using Google Cloud's unified machine learning platform, Vertex AI. Vertex AI streamlines the entire ML workflow by providing the necessary infrastructure, pre-trained models, and tools to build, deploy, and manage your ML and generative AI solutions.
+
+Key features and benefits of Vertex AI:
+---------------------------------------
+The platform layer provides the foundation for building and scaling your AI initiatives. 
+Vertex AI is Google Cloud's unified machine learning (ML) platform designed to streamline the entire ML workflow. It provides the infrastructure, tools, and pre-trained models you need to build, deploy, and manage your ML and generative AI solutions.
+- Open and flexible: Vertex AI supports open frameworks, allowing you to use your preferred tools and models without vendor lock-in.
+- Powerful infrastructure: Leverage Google Cloud's scalable and reliable infrastructure to handle your ML workloads.
+- Pre-trained models: Choose from a wide variety of pre-trained models or build your own.
+- Comprehensive tooling: Develop, deploy, and manage your models with ease using Vertex AI's integrated tools.
+- Customization: Fine-tune and adapt models to your specific needs using the built-in IDE.
+- Easy integration: Integrate your models into applications seamlessly using available APIs.
+
+MLOps for efficient workflows:
+------------------------------
+Operationalizing model training can be challenging and involves thinking about infrastructure and security. By using Vertex AI, you get a fully managed compute infrastructure, high-performance ML optimized training jobs, distributed training, hyperparameter optimization, and enterprise security.
+
+Vertex AI's MLOps tools:
+------------------------
+Vertex AI also includes ML operations (MLOps) tools built in to help you orchestrate end-to-end ML workflows, perform feature engineering, run experiments, manage and iterate your models, track ML metadata, and monitor and evaluate model quality. MLOps helps automate, standardize, and manage the ML project lifecycle, enabling better collaboration and continuous improvement.
+
+Feature store: Share, serve, and reuse ML features to maintain consistency and efficiency.
+Model registry: Manage model versions, track changes, and organize your models throughout their lifecycle.
+Model evaluation: Quickly evaluate and compare model performance to identify the best model for your use case.
+Workflow orchestration: Automate ML workflows, from data preprocessing to deployment, using Vertex AI Pipelines.
+Model monitoring: Monitor models for performance degradation, detect input skew and drift, and trigger updates or retraining.
+
+Key takeaway:
+-------------
+Vertex AI simplifies the complexities of machine learning, making it easier to build and deploy AI solutions. Its unified platform, comprehensive tooling, and MLOps capabilities empower developers and data scientists to innovate and accelerate their AI initiatives.
+--------------------------------------------------------------------------------------------------------------------------------------------
+The model layer:
+----------------
+What is an AI model?
+At the heart of every AI and machine learning system lies the model. Think of it as the brain of the operation. These aren't just any algorithms. They're sophisticated mathematical structures trained on massive amounts of data. This training process allows them to learn patterns and relationships, ultimately enabling them to perform a wide range of tasks, such as generating content, analyzing data, and classifying information.
+
+Vertex AI: A model hub:
+-----------------------
+Within the Vertex AI platform, you have multiple options for how to handle AI models for your project. You can choose to build a model from scratch or use an existing model.
+
+Use models with Model Garden:
+-----------------------------
+For many use cases, your organization won’t need to develop a new model. There are many AI models that already exist today that you can fine-tune and leverage for so many different use cases. Model Garden on Vertex AI is a service that lets you discover, customize, and deploy existing models from Google and Google partners.
+
+Model Garden gives you options to pick from over 160 models and offers options of Google models, third-party models, and open-source models. With Vertex AI, you can customize these models with your own data and deploy them to your custom applications. Additionally, some pre-trained models can be used out-of-the-box without tuning.
+
+- First party foundation models:
+Leverage state-of-the-art models from Google including Gemini models and task-specific models for image generation, speech-to-text, and more.
+Gemini Pro, Flash, and more. View Gemini specs https://cloud.google.com/vertex-ai/generative-ai/docs/learn/models#gemini-models
+Imagen for text-to-image. View Imagen specs https://cloud.google.com/vertex-ai/docs/generative-ai/image/overview
+Veo for text-to-video and image-to-video. View Veo specs https://cloud.google.com/vertex-ai/generative-ai/docs/model-reference/veo-video-generation?
+Chirp 2.0 for speech-to-text. View Chirp specs https://cloud.google.com/vertex-ai/docs/generative-ai/speech/speech-to-text
+
+- First party pretrained APIs:
+Build and deploy AI applications faster with our pre-trained APIs powered by the best Google AI research and technology.
+View Speech-to-Text specs https://cloud.google.com/speech-to-text 
+View Natural Language Processing (NLP) specs https://cloud.google.com/natural-language
+View Translation specs https://cloud.google.com/translate
+View Vision specs https://cloud.google.com/vision
+
+- Open models:
+Access a variety of enterprise-ready open models.
+View Gemma 2 specs ↗
+View CodeGemma specs ↗
+View PaliGemma specs ↗
+View Meta's Llama 3.1 specs ↗ 
+View Meta's Llama 3.2 specs ↗
+View Mistral AI specs ↗
+View Mistral AI21specs ↗
+TII's Falcon BERT, FLAN-T5, ViT, EfficientNet. View TII's Falcon specs ↗
+
+- Third party models:
+Model Garden supports third-party models from partners with foundation models.
+View Anthropic's Claude Model Family specs ↗
+
+Build models with Vertex AI:
+----------------------------
+With Vertex AI, you have two options for training and using your own models. You can go fully custom and create and train models at scale using any ML framework (PyTorch, TensorFlow, scikit-learn, or XGBoost), or there are also options for using AutoML to create and train models with minimal technical knowledge and effort.
+AutoML allows you to build these types of models:
+---------------------------------------------
+Data type	   |     Supported objectives    |
+---------------------------------------------
+Image data	   |     Classification, object detection.
+Video data	   |     Action recognition, classification, object tracking.
+Tabular data   |     Classification/regression, forecasting.
+---------------------------------------------
+
+Key takeaway:
+-------------
+The model lies at the core of any AI system, acting as its "brain" and enabling a wide range of functions from content generation to data analysis. Vertex AI provides a comprehensive platform for leveraging the power of models, offering access to a vast repository of pre-built models in Model Garden and the ability to create custom models. By understanding the different types of models and the model development workflow, leaders can effectively harness AI to drive innovation and solve complex business challenges.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The infrastructure layer:
+-------------------------
+The foundation of gen AI solutions:
+-----------------------------------
+You've seen the incredible potential of generative AI. But have you considered the engine that drives this transformative technology? Let's dive into the crucial role of infrastructure in powering generative AI solutions.
+
+The "infrastructure layer" is the foundation upon which any AI system is built. It's the combination of hardware and software that provides the necessary computing power, storage, and networking capabilities to train, deploy, and scale AI models. This layer is crucial for handling the massive datasets and complex computations involved in modern AI, especially with the rise of large language models and generative AI.
+
+Google has invested heavily in building a robust and cutting-edge AI infrastructure, designed to handle the most demanding AI workloads. Here are some key components.
+
+High performance computing:
+---------------------------
+Imagine your company wants to undertake a new, bold gen AI project. However, the engineering team hits a major roadblock. Training the complex model requires significant processing power, far beyond the capabilities of your company's in-house servers. It takes hours, if not days, to train your specialized models and the long training times have started to hinder the team's progress to the point where it's delaying the product launch. Your existing infrastructure simply can't keep up, and the cost of scaling their own hardware is prohibitive. This is where high-performance computing, the heart of Google's AI infrastructure, comes in.
+
+GPUs & TPUs:
+------------
+These specialized processors are the workhorses of AI. They excel at parallel processing, or doing multiple things at once, which is crucial for training large neural networks quickly and efficiently. GPUs were originally designed for graphics rendering, but since they offer general-purpose parallel processing power they’ve increasingly been used in the AI domain. TPUs are Google's custom-designed chips specifically optimized for AI tasks.
+
+Hypercomputers:
+---------------
+A hypercomputer is essentially a supercomputer built by connecting many individual computers (nodes) together. These nodes contain GPUs and TPUs. By linking them with high-speed networks, they work together as one massive computing unit. They provide the massive scale necessary for training and running the most demanding generative AI models.
+
+High performance storage:
+-------------------------
+Having high-performance storage is essential when building gen AI apps. Gen AI models are data hungry because they learn by analyzing massive datasets, often petabytes in size, containing text, images, code, and other forms of data. This storage provides the capacity and speed to store and access these enormous datasets efficiently. Without it, training would be incredibly slow or even impossible.
+
+Large-scale storage systems:
+---------------------------
+Google Cloud's storage infrastructure is optimized for AI workloads, offering high throughput (the amount of work done within a specific period of time), scalability, and the ability to create dense compute clusters for faster training and inference. As AI models and datasets grow, the system can scale seamlessly to accommodate the increasing demands. Losing data due to storage failures can be catastrophic, so the storage is highly reliable to ensure data durability.
+
+Fast storage access:
+--------------------
+The storage systems also need to provide fast read and write speeds to keep up with the demands of the training process. Otherwise, if storage access is slow, it can significantly hinder the training process.
+
+Networking:
+------------
+Fast and efficient communication is essential for coordinating the work all of the processors in a high performance computing cluster are undertaking. Google's global fiber network provides high-bandwidth, low-latency connectivity, ensuring smooth data flow and efficient communication between different parts of the AI infrastructure.
+
+Using Google Cloud infrastructure can benefit teams in several ways, particularly with respect to scalability, performance, and cost-effectiveness.
+
+Key takeaway:
+-------------
+Google Cloud's robust infrastructure, with its high-performance computing, storage, and networking capabilities, provides the foundation for handling the massive datasets and complex computations required by today's advanced AI models. As leaders, understanding the critical role of infrastructure in AI initiatives is crucial for making informed decisions about resource allocation, scalability, and ultimately, the successful implementation of generative AI solutions within your organizations.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------

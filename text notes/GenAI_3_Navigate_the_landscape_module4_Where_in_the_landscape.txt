@@ -1,0 +1,205 @@
+AI on the Edge:
+---------------
+
+Edge computing:
+---------------
+While hosting infrastructure on the cloud is powerful, it's not always the ideal solution. Imagine a self-driving car needing to make split-second decisions. It can't wait for data to travel to the cloud and back. That's where edge computing comes in.
+
+Google provides the tools to deploy your AI models in these different locations, giving you more control and flexibility.
+
+Edge computing runs AI on devices or servers closer to the data source or point of need.
+
+Why go local or edge?
+---------------------
+Imagine a drone navigating a complex environment. It needs to react instantly to obstacles, making cloud processing too slow. Running AI locally on the drone ensures real-time responsiveness. Other benefits include increased data privacy and reduced reliance on internet connectivity.
+
+To run powerful AI models on edge devices and mobile phones, Google provides tools like Lite Runtime (LiteRT). Think of LiteRT as a platform that helps machine learning models work efficiently on your device. To learn more about Google's high-performance runtime for on-device AI, check out the article, Lite Runtime (LiteRT) Overview. 
+
+One example of an AI model designed for edge is Gemini Nano.
+
+Gemini Nano:
+------------
+Gemini Nano is Google's most efficient and compact AI model, specifically designed to run on the edge on devices like smartphones and embedded systems. It's part of the larger Gemini family of models. Think of Gemini Nano as a miniature version of the powerful AI that usually lives in Google's data centers. This "on-device" or edge approach offers several benefits.
+
+Privacy: Your data stays on your device, enhancing your privacy.
+Speed: You get fast responses since there's no need to send data to the cloud.
+Offline access: Gemini Nano can work even without an internet connection.
+
+Gemini Nano brings the power of AI directly to your devices, making them smarter, more helpful, and more privacy-focused. It is currently being integrated into various Google products and services, including:
+Pixel phones - Gemini Nano powers features like Call Notes, which summarizes phone conversations and Pixel Recorder, which summarizes voice recordings.
+Android - Gemini Nano is available to Android developers through the AI Edge SDK, enabling them to build innovative AI experiences into their apps.
+
+Even when your goal is to deploy on the edge, Vertex AI provides a powerful platform for building, training, and refining your models. You can leverage Vertex AI's capabilities for tasks like data preparation, model training, tuning, model evaluation, collaboration, and MLOps.
+Once your model is ready for the edge, Vertex AI offers tools to streamline the deployment process.
+You can:
+- Convert models: Convert your models to Lite Runtime (LiteRT) for optimal performance on edge devices.
+- Package and deploy: Package your models and dependencies into containers for deployment on various edge hardware.
+- Manage and monitor: Manage your edge deployments, track their performance, and gather insights to improve your models over time.
+Google provides the tools to deploy your AI models in these different locations, giving you more control and flexibility.
+
+Key takeaway:
+--------------
+Edge computing allows AI to run locally on devices or servers closer to the data source, ensuring real-time responsiveness and increasing data control. Google provides tools like Lite Runtime (LiteRT) and Gemini Nano that are specifically designed for edge computing. Even when deploying on the edge, Vertex AI provides a powerful platform for building, training, and refining AI models.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Introduction:
+-------------
+When building generative AI solutions, every situation is different, and you need to make different decisions on these layers based on where your solution fits in. How do you know when you should just use an existing generative AI application or build a full custom solution?
+
+There are obviously so many “layers” to this discussion, but to start answering that, you really need to think about what your needs and resources are.
+what sort of scale is this for? Your solution will be different depending on if it is for an individual, a team, a company, or millions of customers.
+how custom your solution really needs to be. What makes it unique? Will grounding or fine-tuning work, or do you need a brand-new model? Think about how, where, and when users will be interacting with the solution and how that might impact factors like latency and connectivity. 
+you need to think about your resources. How much time do you have, how many people can work on the project, and what’s your budget? These will all impact your decisions.
+
+Roles and responsibilities:
+It is important to understand the resources you have available to build out your solution. Let’s dig deeper into some of the roles and responsibilities at each layer of the stack. 
+
+The AI stack is designed to support different roles with specific needs. Before jumping into building out a solution, ensure you have the proper expertise and talent for what you want to build. Business users can improve their tasks, developers can build custom AI solutions, and AI practitioners can develop and deploy advanced AI models responsibly and securely. This collaborative ecosystem allows your organization to leverage the full potential of AI across various business functions.
+
+Business leaders: Business leaders typically interact with pre-built gen AI solutions to enhance daily operations and improve customer experiences. For example, Google Workspace with Gemini can be used for content creation, data analysis, and document summarization.
+
+Developers: Developers in your organization are responsible for building and deploying custom AI agents and integrating AI capabilities into existing applications. They can use AI Applications for custom agent creation, AI code generation, and AI-driven data processing. Developers can also leverage pre-trained APIs to rapidly integrate AI into applications, or they can use the Vertex AI platform which is designed to help developers build and deploy AI agents with tools for orchestration, grounding, and action.
+
+AI practitioners: AI practitioners play a valuable role in customizing, deploying, and optimizing generative AI models. They leverage tools within Vertex AI to accelerate development and ensure responsible AI practices. Their expertise extends to scaling AI workloads, integrating models with BigQuery, and implementing responsible AI measures such as bias detection and adversarial testing.
+-------------------------------
+Cost:
+------
+The pricing model of gen AI can vary based on which part of the gen AI landscape you are looking at or even which specific product or company you are using. It is important to have a realistic budget and understanding of the cost for your project.
+
+When building gen AI solutions, you pay for three primary activities:
+1. Training the model.
+2. Deploying the model to an endpoint.
+3. Using the model to make predictions.
+
+Training and deploying models often involve paying for the compute time used as well as the storage for the training data and model outputs.
+
+
+Pricing for using models:
+-------------------------
+Usage-based: You pay for the amount you use, often measured in tokens or characters processed. This is common for APIs like Google’s PaLM & Gemini APIs.
+Subscription-based: You pay a recurring fee for access to the model, often with tiers based on usage limits or features.
+Licensing fees: One-time or recurring fees for using a model, especially for commercial purposes or embedding in products.
+Free tiers: Some providers offer free access with limited usage for experimentation or non-commercial purposes.
+
+Pricing metrics for using models:
+---------------------------------
+Tokens: A token represents a piece of text, like a word or part of a word.
+Characters: Some providers, like Google, charge based on the number of characters processed.
+Requests: Sometimes you can be charged per request, regardless of the complexity or volume of the task.
+Compute time: The time taken to process your requests can also factor into the cost, especially for resource-intensive tasks.
+
+Factors affecting cost:
+-----------------------
+Here are some factors affecting cost when using models.
+Model size and complexity: Larger, more capable models generally cost more.
+Context window: A larger context window (the amount of text the model can consider) can increase costs.
+Features: Specialized features like fine-tuning or embedding can have separate pricing.
+Deployment: Depending on where you deploy your model and application, you may have compute based costs.
+
+Time:
+-----
+It probably won’t surprise you to learn that the more custom your solution is, the more time and resources it takes to build. Using a prebuilt gen AI application takes seconds. Building your own custom solution with a custom AI model, can take months. Choosing to build a custom agent with AI Applications takes much less time. 
+
+Think about your project timelines and evaluate them against your needs and requirements. Determine if the timeline is realistic based on your requirements.
+
+Key takeaway:
+-------------
+Successful generative AI initiatives require leaders to strategically allocate resources, including the right mix of business users, developers, and AI practitioners.  
+
+Understanding the costs associated with different generative AI solutions, from pre-built applications to custom models, is crucial for effective budgeting. Aligning project timelines with the complexity of the chosen solution ensures realistic expectations and successful outcomes.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+Gen AI solution needs:
+----------------------
+Before diving headfirst into your generative AI project, it's crucial to take a step back and assess your needs. Aligning your ambitions with your capabilities is key to setting realistic expectations and ensuring a successful outcome. Let's explore the key factors to consider when evaluating the scope and feasibility of your generative AI initiatives.
+
+Scale:
+------
+Is this for individual use, a small team, a large company, or millions of customers?
+
+Small scale:
+As an individual user or small team, you can go very far with pre-built tools. Try to leverage existing gen AI powered applications.
+
+Large scale:
+When building out solutions for millions of customers, you'll likely need a more robust and customized solution. Pick solutions that offer scalability and security. Factor in details to your decision like infrastructure costs, data storage, and potential latency challenges.
+
+Customization:
+--------------
+How specialized does your solution need to be? Powerful foundation models are constantly improving, making custom model development less necessary in many cases.
+
+Start with existing models: Explore pre-trained models available through APIs or open-source libraries. Fine-tune these models on your specific data to achieve better performance for your tasks.
+Identify your unique needs: What sets your project apart? Does it require specialized knowledge, handle complex tasks, or demand a unique user experience? This will help you determine the level of customization needed.
+Consider data specificity: If your project deals with specialized domains like law or medicine, consider fine-tuning with domain-specific datasets or exploring models specifically trained for those areas.
+Consider task complexity: Think about the complexity of the task itself. Are you aiming for simple tasks like text summarization or more intricate ones like code generation or creative writing? This influences model choice and training approaches.
+
+User interaction:
+-----------------
+Think about how users will interact with your AI and design an intuitive and engaging experience.
+
+User interface (UI):
+Seamlessly integrate the AI into your existing workflows. This might involve a dedicated interface (e.g., a chatbot widget on your website) or embedding AI capabilities within your current applications.
+
+User experience (UX):
+Aim for a user-friendly experience. Is it conversational, informative, or task-oriented? Consider the level of guidance and feedback users might need.
+
+Privacy:
+How sensitive is the data you are working with?
+
+Data security:
+What measures will you implement to protect data during processing and storage? Implement robust security measures to protect data during processing and storage. Consider encryption, access controls, and secure data centers.
+
+Compliance:
+Are there specific regulations (GDPR, HIPAA, etc.) that your project needs to adhere to?
+
+Other considerations:
+----------------------
+How specialized does your solution need to be? Powerful foundation models are constantly improving, making custom model development less necessary in many cases.
+
+Latency: Tip: Consider real-time requirements. Do you need instantaneous responses, or can you tolerate some delay? If real-time interaction isn't critical, you have more flexibility in choosing models and infrastructure.
+
+Connectivity: Will the solution always have internet access? Tip: Consider offline functionality. Are there scenarios where the solution needs to function without internet access?
+
+Accuracy: How crucial is the accuracy of the AI's output? What are the acceptable error tolerances? Tip: Define acceptable tolerances. Determine the level of accuracy required for your AI's output. This will influence model selection, training data, and evaluation metrics.
+
+Explainability: Do you need to understand the reasoning behind the AI's decisions? Tip: Transparency is key. In certain domains, understanding the AI's reasoning is crucial. Consider using models or techniques that offer explainability features, especially in healthcare or finance.
+
+Key takeaway:
+-------------
+Before starting a generative AI project, it's crucial to assess your needs across key factors like scale, customization, user interaction, and privacy. Other considerations, including latency, accuracy, and explainability, are also vital for designing a solution that is both effective and feasible.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Choosing and maintaining your gen AI solution:
+----------------------------------------------
+Once you've assessed your needs and resources, it’s time to make decisions such as what model you will use. By carefully considering the factors covered below and conducting thorough research, you can make informed decisions about gen AI pricing and choose the most cost-effective solution for your needs.
+
+Comparing different companies and models:
+-----------------------------------------
+Evaluate model capabilities: Look for benchmarks and comparisons to assess the quality and performance of different models.
+Compare pricing structures: Consider your expected usage and calculate the costs based on the pricing models and metrics of each provider.
+Factor in additional costs: Account for potential costs like data storage, API calls, and fine-tuning.
+Read the fine print: Pay attention to usage limits, data privacy policies, and other terms of service.
+
+Key resources for comparison:
+Provider websites: Check the pricing pages of different companies.
+Research papers and benchmarks: Look for independent evaluations and comparisons of different models.
+Community forums and discussions: Engage with other users and experts to learn about their experiences and pricing insights.
+Maintenance
+
+Building a generative AI solution is a journey, not a destination. To maximize your long-term success, it's essential to consider the ongoing maintenance and evolution of your project from the beginning.
+- How will your project be maintained?
+- Do you have the resources in place to maintain the project over time?
+- What specific maintenance needs will your project have?
+
+Key maintenance considerations:
+-------------------------------
+By proactively planning for maintenance, you'll ensure the long-term success and sustainability of your generative AI solution. Google Cloud provides a fully managed environment, which allows developers to focus on agent development rather than infrastructure and maintenance. With the platform handling deployment and model improvement, developers can maximize their return on investment and avoid costly issues down the road.
+
+Model monitoring and retraining: Establish a system to continuously monitor your model's performance and retrain it periodically with updated data.
+
+Data updates: Plan for regular data updates to keep your model fresh and relevant. This might involve adding new data sources, cleaning existing data, or adapting to evolving data formats.
+
+Software updates and bug fixes: Stay informed about updates to your chosen AI platform, libraries, or frameworks, and implement them promptly to ensure optimal performance and security.
+
+Hardware and infrastructure: Consider the maintenance needs of your hardware and infrastructure. This includes server maintenance, security updates, and capacity planning to accommodate growing data and user demands.
+
+Security and compliance: Maintain a vigilant approach to security. Regularly review and update your security measures to protect against evolving threats. Ensure ongoing compliance with data privacy regulations as they change.
+

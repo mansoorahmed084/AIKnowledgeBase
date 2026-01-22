@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GenAI: Where in the Landscape - Mind Map</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #fa709a;
+            padding-bottom: 20px;
+        }
+
+        .mindmap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-node {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #333;
+            padding: 25px 40px;
+            border-radius: 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 60px;
+            box-shadow: 0 10px 30px rgba(250, 112, 154, 0.4);
+            text-align: center;
+            z-index: 10;
+        }
+
+        .main-sections {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fa709a;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #fa709a;
+        }
+
+        .edge-section {
+            border-left: 5px solid #fa709a;
+        }
+
+        .needs-section {
+            border-left: 5px solid #fee140;
+        }
+
+        .resources-section {
+            border-left: 5px solid #667eea;
+        }
+
+        .decision-section {
+            border-left: 5px solid #30cfd0;
+        }
+
+        .subsection {
+            margin-top: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+
+        .subsection-title {
+            font-weight: 600;
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .explanation {
+            font-size: 0.8em;
+            color: #666;
+            line-height: 1.4;
+            margin-top: 6px;
+            font-style: italic;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .benefit-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #333;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .roles-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .role-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .role-box h3 {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .cost-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .cost-box {
+            background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+
+        .cost-box h3 {
+            margin-bottom: 8px;
+            font-size: 1em;
+        }
+
+        .factors-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .factor-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85em;
+        }
+
+        .considerations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .consideration-box {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85em;
+        }
+
+        .maintenance-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .maintenance-box {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: #333;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1400px) {
+            .main-sections {
+                grid-template-columns: 1fr;
+            }
+            .benefits-grid, .roles-grid, .considerations-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .benefits-grid, .roles-grid, .cost-grid, .factors-grid, .considerations-grid, .maintenance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GenAI: Where in the Landscape</h1>
+        
+        <div class="mindmap">
+            <div class="main-sections">
+                <!-- AI on the Edge Section -->
+                <div class="section edge-section">
+                    <div class="section-title">📱 AI on the Edge</div>
+                    <div class="explanation" style="font-style: normal; color: #333; margin-bottom: 15px;">
+                        Running AI on devices or servers closer to data source - ensures real-time responsiveness and increased data privacy
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Why Edge Computing?</div>
+                        <div class="benefits-grid">
+                            <div class="benefit-box">Real-time Responsiveness</div>
+                            <div class="benefit-box">Increased Data Privacy</div>
+                            <div class="benefit-box">Reduced Internet Dependency</div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Gemini Nano</div>
+                        <div class="explanation">
+                            Google's most efficient and compact AI model designed for edge devices (smartphones, embedded systems)
+                        </div>
+                        <div class="benefits-grid" style="margin-top: 10px;">
+                            <div class="benefit-box">Privacy - Data stays on device</div>
+                            <div class="benefit-box">Speed - No cloud latency</div>
+                            <div class="benefit-box">Offline Access - Works without internet</div>
+                        </div>
+                        <div class="explanation" style="margin-top: 10px;">
+                            <strong>Use Cases:</strong> Pixel phones (Call Notes, Recorder), Android apps via AI Edge SDK
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Vertex AI for Edge</div>
+                        <div class="explanation">
+                            Build, train, refine on Vertex AI → Convert to LiteRT → Package & deploy → Manage & monitor edge deployments
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gen AI Solution Needs Section -->
+                <div class="section needs-section">
+                    <div class="section-title">🎯 Gen AI Solution Needs</div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Scale</div>
+                        <div class="explanation">
+                            <strong>Small scale:</strong> Individual/team - leverage pre-built tools<br>
+                            <strong>Large scale:</strong> Millions of customers - robust, scalable, secure solutions with infrastructure planning
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Customization</div>
+                        <div class="explanation">
+                            Start with existing models → Fine-tune on your data<br>
+                            Identify unique needs → Consider data specificity → Evaluate task complexity
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">User Interaction</div>
+                        <div class="explanation">
+                            <strong>UI:</strong> Seamless integration into workflows (chatbot widget, embedded capabilities)<br>
+                            <strong>UX:</strong> User-friendly, conversational, informative, task-oriented
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Privacy</div>
+                        <div class="explanation">
+                            <strong>Data Security:</strong> Encryption, access controls, secure data centers<br>
+                            <strong>Compliance:</strong> GDPR, HIPAA, and other regulations
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Other Considerations</div>
+                        <div class="considerations-grid">
+                            <div class="consideration-box">Latency - Real-time vs delayed responses</div>
+                            <div class="consideration-box">Connectivity - Online vs offline functionality</div>
+                            <div class="consideration-box">Accuracy - Error tolerances and requirements</div>
+                            <div class="consideration-box">Explainability - Understanding AI reasoning</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resources Section -->
+                <div class="section resources-section">
+                    <div class="section-title">👥 Roles & Resources</div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Roles and Responsibilities</div>
+                        <div class="roles-grid">
+                            <div class="role-box">
+                                <h3>Business Leaders</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.8em;">
+                                    Use pre-built gen AI solutions (Google Workspace with Gemini) for content creation, data analysis, document summarization
+                                </div>
+                            </div>
+                            <div class="role-box">
+                                <h3>Developers</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.8em;">
+                                    Build custom AI agents, integrate AI capabilities, use pre-trained APIs or Vertex AI platform for orchestration, grounding, and action
+                                </div>
+                            </div>
+                            <div class="role-box">
+                                <h3>AI Practitioners</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.8em;">
+                                    Customize, deploy, optimize models using Vertex AI. Scale workloads, integrate with BigQuery, implement responsible AI measures
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Cost</div>
+                        <div class="explanation">
+                            <strong>Three primary activities:</strong> Training, Deploying, Using models for predictions
+                        </div>
+                        <div class="cost-grid">
+                            <div class="cost-box">
+                                <h3>Pricing Models</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.8em;">
+                                    Usage-based (tokens/characters), Subscription-based, Licensing fees, Free tiers
+                                </div>
+                            </div>
+                            <div class="cost-box">
+                                <h3>Pricing Metrics</h3>
+                                <div class="explanation" style="color: rgba(255,255,255,0.9); font-size: 0.8em;">
+                                    Tokens, Characters, Requests, Compute time
+                                </div>
+                            </div>
+                        </div>
+                        <div class="factors-grid" style="margin-top: 15px;">
+                            <div class="factor-box">Model size & complexity</div>
+                            <div class="factor-box">Context window size</div>
+                            <div class="factor-box">Specialized features</div>
+                            <div class="factor-box">Deployment location</div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Time</div>
+                        <div class="explanation">
+                            <strong>Pre-built application:</strong> Seconds<br>
+                            <strong>Custom agent:</strong> Much less time<br>
+                            <strong>Custom model:</strong> Months<br>
+                            Evaluate timelines against needs and requirements
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Choosing & Maintaining Section -->
+                <div class="section decision-section">
+                    <div class="section-title">🔧 Choosing & Maintaining</div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Comparing Solutions</div>
+                        <div class="explanation">
+                            Evaluate model capabilities (benchmarks, comparisons)<br>
+                            Compare pricing structures (usage, costs)<br>
+                            Factor in additional costs (storage, API calls, fine-tuning)<br>
+                            Read fine print (usage limits, privacy policies, terms)
+                        </div>
+                        <div class="explanation" style="margin-top: 10px;">
+                            <strong>Resources:</strong> Provider websites, Research papers & benchmarks, Community forums
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <div class="subsection-title">Maintenance Considerations</div>
+                        <div class="maintenance-grid">
+                            <div class="maintenance-box">Model monitoring & retraining</div>
+                            <div class="maintenance-box">Data updates</div>
+                            <div class="maintenance-box">Software updates & bug fixes</div>
+                            <div class="maintenance-box">Hardware & infrastructure</div>
+                            <div class="maintenance-box">Security & compliance</div>
+                        </div>
+                        <div class="explanation" style="margin-top: 10px;">
+                            Google Cloud provides fully managed environment - developers focus on agent development rather than infrastructure
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Takeaways -->
+            <div style="margin-top: 50px; padding: 30px; background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); border-radius: 12px; color: #333; text-align: center;">
+                <h2 style="margin-bottom: 20px; font-size: 1.8em;">Key Takeaways</h2>
+                <div style="text-align: left; font-size: 1.05em; line-height: 1.8;">
+                    <p style="margin-bottom: 15px;"><strong>Edge Computing:</strong> AI on devices closer to data source ensures real-time responsiveness, privacy, and offline access. Gemini Nano and LiteRT enable edge deployment.</p>
+                    <p style="margin-bottom: 15px;"><strong>Solution Needs:</strong> Assess scale, customization level, user interaction patterns, privacy requirements, latency, connectivity, accuracy, and explainability before building.</p>
+                    <p style="margin-bottom: 15px;"><strong>Resources:</strong> Understand roles (business leaders, developers, AI practitioners), costs (training, deployment, usage), and time requirements (seconds to months).</p>
+                    <p><strong>Maintenance:</strong> Plan for ongoing model monitoring, data updates, software maintenance, and security compliance. Google Cloud's managed environment reduces infrastructure burden.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
